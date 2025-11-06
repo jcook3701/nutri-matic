@@ -18,7 +18,11 @@ readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "typer",
+  "cookiecutter",
+  "GitPython",
+]
 keywords = [
   "python3",
   "cookiecutter",
