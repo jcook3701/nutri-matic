@@ -21,6 +21,10 @@ def add_docs(
         checkout: str = 'main',
         force: bool = False
 ) -> None:
+    """
+    Pull all files from the cookiecutter template into ./docs/<target_dir>
+    in the target project root.
+    """
     # Create a temp dir to render template
     with tempfile.TemporaryDirectory() as tmpdir:
         cookiecutter(

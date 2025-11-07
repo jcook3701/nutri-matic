@@ -8,13 +8,23 @@ Author: Jared Cook
 Description: Cookiecutter utilities for automating project templates.
 """
 
-__version__ = "0.1.0"
-__author__ = "Jared Cook"
-__license__ = "MIT"
+from importlib.metadata import PackageNotFoundError, metadata
+
+try:
+    pkg_meta = metadata("ccutils")
+
+    __version__ = pkg_meta["Version"] if "Version" in pkg_meta else "0.0.0"
+    __author__ = pkg_meta["Author"] if "Author" in pkg_meta else "Unknown"
+    __license__ = pkg_meta["License"] if "License" in pkg_meta else "Unknown"
+
+except PackageNotFoundError:
+    __version__ = "0.0.0"
+    __author__ = "Jared Cook"
+    __license__ = "MIT"
+
+__copyright__ = "2025 Jared Cook"
+
 
 from .cli import app
-from .docs import add_docs
-from .extract import extract_cookiecutter_config_from_repo
-from .run import run_template
 
-__all__ = ["app", "add_docs", "extract_cookiecutter_config_from_repo", "run_template"]
+__all__ = ["app"]
