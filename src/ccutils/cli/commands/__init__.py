@@ -1,11 +1,11 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
 See the LICENSE file for more details.
 
 Author: Jared Cook
-Description: Cookiecutter commands for automating project templates.
+Description: Commands Initilization.
 """
 
 from .config import show_config
@@ -17,11 +17,11 @@ from .run import run
 from .yaml_front_matter import add_yaml_front_matter
 
 __all__ = [
-    "show_config",
     "add_docs",
     "add_yaml_front_matter",
     "build_readme",
     "extract",
     "list_namespace",
     "run",
+    "show_config",
 ]

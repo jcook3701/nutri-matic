@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -7,10 +7,11 @@ See the LICENSE file for more details.
 Author: Jared Cook
 """
 
-from pathlib import Path
-from pydantic import BaseModel
-
+from collections.abc import Mapping
 from importlib.metadata import PackageNotFoundError, metadata
+from typing import cast
+
+from pydantic import BaseModel
 
 
 class Metadata(BaseModel):
@@ -31,10 +32,9 @@ class Metadata(BaseModel):
     @property
     def copyright(self) -> str:
         return f"2025 {self.author}"
-    
 
     @classmethod
-    def from_package(cls, package_name: str = "ccutils") -> "Metadata":
+    def from_package(cls, package_name: str = "cc-utils") -> "Metadata":
         """
         Create Metadata from the installed package metadata.
 
@@ -42,18 +42,15 @@ class Metadata(BaseModel):
         """
         try:
             pkg_meta = metadata(package_name)
+            pkg_meta_dict = cast(Mapping[str, str], pkg_meta)
+
             return cls(
-                version=pkg_meta.get("Version", "0.1.0"),
-                author=pkg_meta.get("Author", "Jared Cook"),
-                license=pkg_meta.get("License", "MIT"),
+                version=pkg_meta_dict.get("Version", "0.1.0"),
+                author=pkg_meta_dict.get("Author", "Jared Cook"),
+                license=pkg_meta_dict.get("License", "MIT"),
             )
         except PackageNotFoundError:
             return DEFAULT_METADATA
 
 
-
-DEFAULT_METADATA = Metadata(
-    version="0.1.0",
-    author="Jared Cook",
-    license="MIT"
-)
+DEFAULT_METADATA = Metadata(version="0.1.0", author="Jared Cook", license="MIT")

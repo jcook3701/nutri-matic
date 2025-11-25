@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -31,8 +31,8 @@ def add_docs(
     Pull all files from the cookiecutter template into ./docs/<target_dir>
     in the target project root.
     """
-    logger = ctx.obj["logger"]
-    cfg = ctx.obj["cfg"]
+    _ = ctx.obj["logger"]
+    _ = ctx.obj["cfg"]
 
     # Create a temp dir to render template
     with tempfile.TemporaryDirectory() as tmpdir:

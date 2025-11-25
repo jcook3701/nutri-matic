@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -8,25 +8,23 @@ Author: Jared Cook
 Description:
 """
 
-import json
-import yaml
 import typer
-from ccutils.core.config import ensure_config
+import yaml
 
 
 def show_config(
     ctx: typer.Context,
-    format: str = typer.Option(
+    _format: str = typer.Option(
         "json", "--format", "-f", help="Output format: json or yaml"
-    )
-):
+    ),
+) -> None:
     """
     Print the current CLI configuration to the screen.
     """
-    logger = ctx.obj["logger"]
+    # logger = ctx.obj["logger"]
     cfg = ctx.obj["cfg"]
 
-    if format.lower() in {"yaml", "yml"}:
+    if _format.lower() in {"yaml", "yml"}:
         typer.echo(
             yaml.safe_dump(cfg.model_dump(mode="json", by_alias=True), sort_keys=False)
         )

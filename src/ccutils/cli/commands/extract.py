@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -34,8 +34,8 @@ def extract(
     """
     Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.
     """
-    logger = ctx.obj["logger"]
-    cfg = ctx.obj["cfg"]
+    _ = ctx.obj["logger"]
+    _ = ctx.obj["cfg"]
 
     with tempfile.TemporaryDirectory() as tmpdir:
         typer.echo(f"Cloning {repo} into {tmpdir} ...")

@@ -1,11 +1,11 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
 See the LICENSE file for more details.
 
 Author: Jared Cook
-Description: ccutils Base model for ccutils project models.
+Description: cc-utils Base model for cc-utils project models.
 """
 
 from deprecated import deprecated

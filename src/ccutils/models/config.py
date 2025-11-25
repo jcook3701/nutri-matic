@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -7,7 +7,7 @@ See the LICENSE file for more details.
 Author: Jared Cook
 Description: CLI Configuration model.
 
-Configuration file location: ~/.config/ccutils/config.yml
+Configuration file location: ~/.config/cc-utils/config.yml
 """
 
 from pathlib import Path
@@ -20,7 +20,7 @@ from .github import GitHubAccount, GitHubAuth
 
 class CLIConfig(BaseModel):
     """
-    Represents user CLI configuration for ccutils.
+    Represents user CLI configuration for cc-utils.
 
 
     Attributes:
@@ -28,9 +28,9 @@ class CLIConfig(BaseModel):
          ga_tracking: (str) Google Analytics Tracking number.
          accounts: (Accounts) User accounts.
          default_template_branch: (str)
-         cache_dir: (Path) ccutils cache directory.
-         log_file: (Path) ccutils log file.
-         verbose: (bool) ccutils verbose mode.
+         cache_dir: (Path) cc-utils cache directory.
+         log_file: (Path) cc-utils log file.
+         verbose: (bool) cc-utils verbose mode.
     """
 
     github: GitHubAccount | None = None
@@ -39,8 +39,8 @@ class CLIConfig(BaseModel):
 
     default_template_branch: str = "main"
 
-    cache_dir: Path = Path.home() / ".cache" / "ccutils"
-    log_file: Path = Path.home() / ".ccutils" / "ccutlis.log"
+    cache_dir: Path = Path.home() / ".cache" / "cc-utils"
+    log_file: Path = Path.home() / ".cc-utils" / "ccutlis.log"
 
     verbose: bool = False
 

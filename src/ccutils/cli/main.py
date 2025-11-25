@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -13,46 +13,42 @@ Provides commands to:
   - run: Render a Cookiecutter template using a pre-supplied JSON config file.
 """
 
-from dataclasses import replace
-
 import typer
 
 from ccutils.cli.build import app as build_app
 from ccutils.cli.config import app as config_app
 from ccutils.core.config import ensure_config
-from ccutils.core.logger import setup_logging
 from ccutils.models import CLIConfig
 
-from .commands import add_docs, extract, list as list_cmds, run, show_config
+from .commands import add_docs, extract, list as list_cmds, run
+from .options import verbose_mode, version_mode
 
-app = typer.Typer(help="CCUtils: Cookiecutter automation utilities")
+app = typer.Typer(help="CC-Utils: Cookiecutter automation utilities")
 
 
 @app.callback(invoke_without_command=True)
 def main(
     ctx: typer.Context,
     verbose: bool = typer.Option(
-        False, "--verbose", "-v", help="Enable verbose logging"
+        False, "--verbose", "-v", help="Enable verbose logging."
+    ),
+    version: bool = typer.Option(
+        None,
+        "--version",
+        "-V",
+        callback=version_mode,
+        help="Show the cc-utils version.",
     ),
 ) -> None:
     """
-    Main CLI entrypoint for ccutils:
+    Main CLI entrypoint for cc-utils:
     Initialize configuration and logging for all subcommands.
     """
     # Ensure config exists and load it
     cfg: CLIConfig = ensure_config()
 
-    # Override verbosity if CLI flag provided
-    if verbose:
-        cfg = replace(cfg, verbose=True)
-
-    logger = setup_logging(cfg)
-
-    logger.debug("Verbose mode enabled.")
-    logger.debug(f"Loaded configuration: {cfg}")
-
     # Attach shared objects to context
-    ctx.obj = {"cfg": cfg, "logger": logger}
+    ctx.obj = verbose_mode(cfg, verbose)
 
 
 # -----------------------------

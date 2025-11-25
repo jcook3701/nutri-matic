@@ -1,13 +1,13 @@
 # pyproject.toml
 # =========================================
-# Project: ccutils
+# Project: cc-utils
 # =========================================
 [build-system]
 requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ccutils"
+name = "cc-utils"
 version = "0.1.0"
 description = "Cookiecutter utilities for jcook3701's cookiecutter templates."
 authors = [
@@ -38,9 +38,9 @@ classifiers = [
   "Operating System :: OS Independent",
 ]
 [project.urls]
-Homepage = "https://github.com/jcook3701/ccutils"
-Repository = "https://github.com/jcook3701/ccutils"
-Documentation = "https://github.com/jcook3701/ccutils/docs/jekyll"
+Homepage = "https://github.com/jcook3701/cc-utils"
+Repository = "https://github.com/jcook3701/cc-utils"
+Documentation = "https://github.com/jcook3701/cc-utils/docs/jekyll"
 
 [project.optional-dependencies]
 dev = [
@@ -62,11 +62,12 @@ docs = [
   "sphinx-autodoc-typehints>=3.5",
 ]
 # ====================================
-# Optional entry point (lets you run with `python -m ccutils`)
+# Optional entry point (lets you run with `python -m cc-utils`)
 # ====================================
 [project.scripts]
-ccutils = "ccutils.cli.main:app"
-ccbuild = "ccutils.cli.build:app"
+cc-utils = "ccutils.cli.main:app"
+cc-build = "ccutils.cli.build:app"
+cc-config = "ccutils.cli.config:app"
 # ====================================
 # Setuptools Configuration:
 # ====================================

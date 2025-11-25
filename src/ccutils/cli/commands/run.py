@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -29,8 +29,8 @@ def run(
     """
     Run a cookiecutter template using a pre-supplied JSON config.
     """
-    logger = ctx.obj["logger"]
-    cfg = ctx.obj["cfg"]
+    _ = ctx.obj["logger"]
+    _ = ctx.obj["cfg"]
 
     with open(config) as f:
         extra_context = json.load(f)

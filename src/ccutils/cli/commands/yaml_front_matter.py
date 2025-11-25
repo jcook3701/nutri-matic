@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -110,8 +110,8 @@ def add_yaml_front_matter(
     """
     Add YAML front matter to all files in DIRECTORY matching extensions.
     """
-    logger = ctx.obj["logger"]
-    cfg = ctx.obj["cfg"]
+    _ = ctx.obj["logger"]
+    _ = ctx.obj["cfg"]
 
     extensions = {e.lower() for e in ext}
 

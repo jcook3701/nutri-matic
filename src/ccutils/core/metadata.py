@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -12,8 +12,10 @@ from collections.abc import Mapping
 from importlib.metadata import PackageNotFoundError, metadata
 from typing import cast
 
-from ccutils.models import DEFAULT_METADATA, Metadata
+from deprecated import deprecated
 
+
+@deprecated("Use ccutils.models.Metadata from_package instead")
 def init_metadata() -> None:
     """
     Populate module-level metadata such as ``__version__``, ``__author__``,
@@ -35,7 +37,7 @@ def init_metadata() -> None:
     package information defined in ``pyproject.toml``.
     """
     try:
-        pkg_meta = metadata("ccutils")
+        pkg_meta = metadata("cc-utils")
         pkg_meta_dict = cast(Mapping[str, str], pkg_meta)
 
         version = pkg_meta_dict.get("Version", "0.1.0")

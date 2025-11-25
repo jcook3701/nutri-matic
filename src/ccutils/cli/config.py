@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -7,17 +7,16 @@ See the LICENSE file for more details.
 Author: Jared Cook
 Description: Command-line interface for ccutils.config: Cookiecutter configuration utilities.
 """
-from dataclasses import replace
 
 import typer
 
 from ccutils.core.config import ensure_config
-from ccutils.core.logger import setup_logging
 from ccutils.models import CLIConfig
 
 from .commands import show_config
+from .options import verbose_mode
 
-app = typer.Typer(help="ccutils configuration tools.")
+app = typer.Typer(help="cc-utils configuration tools.")
 
 
 @app.callback(invoke_without_command=True)
@@ -28,23 +27,14 @@ def main(
     ),
 ) -> None:
     """
-    Main CLI entrypoint for ccutils:
+    Main CLI entrypoint for cc-utils:
     Initialize configuration and logging for all subcommands.
     """
     # Ensure config exists and load it
     cfg: CLIConfig = ensure_config()
 
-    # Override verbosity if CLI flag provided
-    if verbose:
-        cfg = replace(cfg, verbose=True)
-
-    logger = setup_logging(cfg)
-
-    logger.debug("Verbose mode enabled.")
-    logger.debug(f"Loaded configuration: {cfg}")
-
     # Attach shared objects to context
-    ctx.obj = {"cfg": cfg, "logger": logger}
+    ctx.obj = verbose_mode(cfg, verbose)
 
 
 # -----------------------------

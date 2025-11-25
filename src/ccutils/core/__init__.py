@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -16,17 +16,11 @@ from .bash import (
 from .config import ensure_config
 from .github import fetch_namespace
 from .logger import setup_logging
-from .metadata import (
-    get_package_metadata,
-    init_metadata
-)
 
 __all__ = [
     "clean",
     "ensure_config",
     "fetch_namespace",
-    "get_package_metadata",
-    "init_metadata",
     "make",
     "setup_logging",
     "tree",

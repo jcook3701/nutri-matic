@@ -1,4 +1,4 @@
-"""ccutils Package
+"""cc-utils Package
 
 © All rights reserved. Jared Cook
 
@@ -56,8 +56,8 @@ def build_readme(
     """
     Build README.md using Jekyll exactly like the Makefile target.
     """
-    logger = ctx.obj["logger"]
-    cfg = ctx.obj["cfg"]
+    _ = ctx.obj["logger"]
+    _ = ctx.obj["cfg"]
 
     typer.echo("🔨 Building ./README.md 📘 with Jekyll...")
 
