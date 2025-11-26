@@ -8,16 +8,19 @@ __Version:__ {{ site.version }}
 
 ***
 
+![ruff-lint](https://github.com/OWNER/REPO/actions/workflows/ruff-lint.yml/badge.svg)
+
+
 ## Command Examples:
 ### 🔧 cc-utils (add_docs, extract, run, list)
-#### Add Docs  
+#### Add Docs:
 __Description:__ Add GitHub docs to an existing project using the github-docs-cookiecutter template.  
 1.  
 ``` shell
 $ cc-utils add-docs --help
 ```
 
-#### Extract  
+#### Extract:
 __Description:__ Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.  
 1.  
 ``` shell
@@ -33,13 +36,13 @@ $ cc-utils extract \
     --output clean_cookiecutter.json  
 ```
 
-#### Run  
+#### Run:
 __Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.  
 ```shell
 $ cc-utils run --help
 ```
 
-#### List
+#### List:
 __Description:__ List available cookiecutter templates under a namespace.  
 ```shell
 $ cc-utils list --help
@@ -62,14 +65,16 @@ $ cc-config show
 
 ### 🔨 Build (cc-build)
 __Description:__ Cookiecutter build automation utilities.
-
+__Note:__ These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile. 
 #### Sub-commands: (readme, add-yaml-front-matter)
 
 #### Readme
+__Description:__ Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.  
 __Note__: Replace with real values.  
-```shell
-$ cc-build readme $(JEKYLL_DIR) ./README.md \
-		--tmp-dir $(README_GEN_DIR) --jekyll-cmd '$(JEKYLL_BUILD_CMD)'
+```makefile
+readme:
+  cc-build readme $(JEKYLL_DIR) ./README.md \
+	  --tmp-dir $(README_GEN_DIR) --jekyll-cmd '$(JEKYLL_BUILD_CMD)'
 ```
 
 ***
@@ -80,26 +85,32 @@ __Description:__ cc-templates tools.
 #### Sub-commands: (readme, add-yaml-front-matter)
 
 #### Generate: 
+__Description:__
 ```shell
 $ cc-templates generate
+```
+#### add-yaml-front-matter:
+__Description:__
+```shell
+$ cc-templates add-yaml-front-matter
 ```
 
 ***
 
-## Development
+## Development Strategy
+__Note:__ All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.  
 ### 🐍️ Build environment (.venv)
 ``` shell
 $ make install  
 ```
 ### 🔍 Linting (ruff & yaml-lint)
-2.
 ``` shell
 $ make lint-check  
 ```
 ``` shell
 $ make lint-fix  
 ```
-### 🎨 Formating (black)
+### 🎨 Formatting (black)
 ```shell
 $ make format-check
 ```
@@ -114,6 +125,10 @@ $ make typecheck
 ``` shell
 $ make test  
 ```
+### 🔖 Version Bumping (bumpy-my-version)
+```shell
+$ make bump-version-patch
+```
 ### 📦 Building (build)
 ```shell
 $ make build
@@ -127,6 +142,7 @@ $ make pubish
 $ make help  
 ```
 
+***
 
 ### Authors Notes:  
 
@@ -134,9 +150,10 @@ $ make help
 ### Future Ideas (TODOs):
 1. cc-templates/ccindex.toml
   * create/update this file using the individual ccmeta.toml files in cc-templates
+2. Finish updating this.readme with command usage.
 
 ## Packages
-### PyPi (stabale)
+### PyPi (stable)
 
 ### TestPyPi (development)
 https://test.pypi.org/project/cc-utils/

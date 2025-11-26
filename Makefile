@@ -142,7 +142,7 @@ install: venv
 	$(AT)$(PIP) install -e $(DEV_DOCS)
 	$(AT)echo "✅ Dependencies installed."
 # --------------------------------------------------
-# Formating (black)
+# Formatting (black)
 # --------------------------------------------------
 black-formatter-check:
 	$(AT)echo "🔍 Running black formatter style check..."
@@ -195,7 +195,7 @@ test:
 # Documentation (Sphinx + Jekyll)
 # --------------------------------------------------
 sphinx:
-	$(AT)echo "🧹 Clening Sphinx build artifacts..."
+	$(AT)echo "🧹 Cleaning Sphinx build artifacts..."
 	$(AT)rm -rf $(JEKYLL_OUTPUT_DIR)
 	$(AT)echo "🔨 Building Sphinx documentation 📘 as Markdown..."
 	$(AT)$(SPHINX) $(SPHINX_DIR) $(JEKYLL_OUTPUT_DIR)
@@ -230,12 +230,12 @@ old-readme:
 	$(AT)printf '%s\n' '<!--' \
 		'  Auto-generated file. Do not edit directly.' \
 		'  Edit $(JEKYLL_DIR)/README.md instead.' \
-		'  Run ```make readme``` to regenrate this file' \
+		'  Run ```make readme``` to regenerate this file' \
 		'-->' >> $(README_GEN_DIR)/README.md
 	$(AT)cat $(JEKYLL_DIR)/README.md >> $(README_GEN_DIR)/README.md
 	$(AT)cd $(README_GEN_DIR) && $(JEKYLL_BUILD)
 	$(AT)cp $(README_GEN_DIR)/_site/README.md ./README.md
-	$(AT)echo "🧹 Clening README.md build artifacts..."
+	$(AT)echo "🧹 Cleaning README.md build artifacts..."
 	$(AT)rm -r $(README_GEN_DIR)
 	$(AT)echo "✅ README.md auto generation complete!"
 # --------------------------------------------------
@@ -245,7 +245,7 @@ old-readme:
 bump-version-patch:
 	$(AT)echo "🔖 Updating $(PACKAGE_NAME) version from $(VERSION)..."
 	$(AT)$(BUMPVERSION) $(PATCH)
-	$(AT)echo "✅ $(PACKAGE_NAME) version udpate complete!"
+	$(AT)echo "✅ $(PACKAGE_NAME) version update complete!"
 # --------------------------------------------------
 # Build program
 # --------------------------------------------------
@@ -269,7 +269,7 @@ publish:
 # Clean artifacts
 # --------------------------------------------------
 clean:
-	$(AT)echo "🧹 Clening build artifacts..."
+	$(AT)echo "🧹 Cleaning build artifacts..."
 	$(AT)rm -rf $(SPHINX_DIR)/_build
 	$(AT)$(call run_ci_safe, cd $(JEKYLL_DIR) && $(JEKYLL_CLEAN))
 	$(AT)rm -rf build dist *.egg-info
