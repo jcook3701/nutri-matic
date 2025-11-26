@@ -13,9 +13,11 @@
 
 <hr />
 
+<p><img src="https://github.com/OWNER/REPO/actions/workflows/ruff-lint.yml/badge.svg" alt="ruff-lint" /></p>
+
 <h2 id="command-examples">Command Examples:</h2>
 <h3 id="-cc-utils-add_docs-extract-run-list">🔧 cc-utils (add_docs, extract, run, list)</h3>
-<h4 id="add-docs">Add Docs</h4>
+<h4 id="add-docs">Add Docs:</h4>
 <p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.</p>
 <ol>
   <li>
@@ -24,7 +26,7 @@
   </li>
 </ol>
 
-<h4 id="extract">Extract</h4>
+<h4 id="extract">Extract:</h4>
 <p><strong>Description:</strong> Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.</p>
 <ol>
   <li>
@@ -43,12 +45,12 @@
   </li>
 </ol>
 
-<h4 id="run">Run</h4>
+<h4 id="run">Run:</h4>
 <p><strong>Description:</strong> Run a cookiecutter template using a pre-supplied JSON configuration file.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-utils run <span class="nt">--help</span>
 </code></pre></div></div>
 
-<h4 id="list">List</h4>
+<h4 id="list">List:</h4>
 <p><strong>Description:</strong> List available cookiecutter templates under a namespace.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-utils list <span class="nt">--help</span>
 </code></pre></div></div>
@@ -68,14 +70,16 @@
 <hr />
 
 <h3 id="-build-cc-build">🔨 Build (cc-build)</h3>
-<p><strong>Description:</strong> Cookiecutter build automation utilities.</p>
-
+<p><strong>Description:</strong> Cookiecutter build automation utilities.
+<strong>Note:</strong> These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.</p>
 <h4 id="sub-commands-readme-add-yaml-front-matter">Sub-commands: (readme, add-yaml-front-matter)</h4>
 
 <h4 id="readme">Readme</h4>
-<p><strong>Note</strong>: Replace with real values.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-build readme <span class="si">$(</span>JEKYLL_DIR<span class="si">)</span> ./README.md <span class="se">\</span>
-		<span class="nt">--tmp-dir</span> <span class="si">$(</span>README_GEN_DIR<span class="si">)</span> <span class="nt">--jekyll-cmd</span> <span class="s1">'$(JEKYLL_BUILD_CMD)'</span>
+<p><strong>Description:</strong> Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.<br />
+<strong>Note</strong>: Replace with real values.</p>
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">readme</span><span class="o">:</span>
+  <span class="err">cc-build</span> <span class="err">readme</span> <span class="err">$(JEKYLL_DIR)</span> <span class="err">./README.md</span> <span class="err">\</span>
+	  <span class="err">--tmp-dir</span> <span class="err">$(README_GEN_DIR)</span> <span class="err">--jekyll-cmd</span> <span class="s1">'$(JEKYLL_BUILD_CMD)'</span>
 </code></pre></div></div>
 
 <hr />
@@ -86,22 +90,27 @@
 <h4 id="sub-commands-readme-add-yaml-front-matter-1">Sub-commands: (readme, add-yaml-front-matter)</h4>
 
 <h4 id="generate">Generate:</h4>
+<p><strong>Description:</strong></p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-templates generate
+</code></pre></div></div>
+<h4 id="add-yaml-front-matter">add-yaml-front-matter:</h4>
+<p><strong>Description:</strong></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-templates add-yaml-front-matter
 </code></pre></div></div>
 
 <hr />
 
-<h2 id="development">Development</h2>
+<h2 id="development-strategy">Development Strategy</h2>
+<p><strong>Note:</strong> All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.</p>
 <h3 id="️-build-environment-venv">🐍️ Build environment (.venv)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">install</span>  
 </code></pre></div></div>
 <h3 id="-linting-ruff--yaml-lint">🔍 Linting (ruff &amp; yaml-lint)</h3>
-<p>2.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-check  
 </code></pre></div></div>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-fix  
 </code></pre></div></div>
-<h3 id="-formating-black">🎨 Formating (black)</h3>
+<h3 id="-formatting-black">🎨 Formatting (black)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-check
 </code></pre></div></div>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-fix
@@ -111,6 +120,9 @@
 </code></pre></div></div>
 <h3 id="-testing-pytest">🧪 Testing (pytest)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">test</span>  
+</code></pre></div></div>
+<h3 id="-version-bumping-bumpy-my-version">🔖 Version Bumping (bumpy-my-version)</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make bump-version-patch
 </code></pre></div></div>
 <h3 id="-building-build">📦 Building (build)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make build
@@ -122,6 +134,8 @@
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">help</span>  
 </code></pre></div></div>
 
+<hr />
+
 <h3 id="authors-notes">Authors Notes:</h3>
 
 <h3 id="future-ideas-todos">Future Ideas (TODOs):</h3>
@@ -131,10 +145,11 @@
       <li>create/update this file using the individual ccmeta.toml files in cc-templates</li>
     </ul>
   </li>
+  <li>Finish updating this.readme with command usage.</li>
 </ol>
 
 <h2 id="packages">Packages</h2>
-<h3 id="pypi-stabale">PyPi (stabale)</h3>
+<h3 id="pypi-stable">PyPi (stable)</h3>
 
 <h3 id="testpypi-development">TestPyPi (development)</h3>
 <p>https://test.pypi.org/project/cc-utils/</p>
