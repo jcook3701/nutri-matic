@@ -8,15 +8,16 @@ __Version:__ {{ site.version }}
 
 ***
 
-## Usage (Commands)
-### Add Docs  
+## Command Examples:
+### 🔧 cc-utils (add_docs, extract, run, list)
+#### Add Docs  
 __Description:__ Add GitHub docs to an existing project using the github-docs-cookiecutter template.  
 1.  
 ``` shell
 $ cc-utils add-docs --help
 ```
 
-### Extract  
+#### Extract  
 __Description:__ Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.  
 1.  
 ``` shell
@@ -32,13 +33,13 @@ $ cc-utils extract \
     --output clean_cookiecutter.json  
 ```
 
-### Run  
+#### Run  
 __Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.  
 ```shell
 $ cc-utils run --help
 ```
 
-### List
+#### List
 __Description:__ List available cookiecutter templates under a namespace.  
 ```shell
 $ cc-utils list --help
@@ -46,7 +47,7 @@ $ cc-utils list --help
 
 ***
 
-### Config (cc-config)
+### ⚙️ Config (cc-config)
 __Description:__ cc-utils configuration tools.
 
 #### Sub-commands: (show)
@@ -59,7 +60,7 @@ $ cc-config show
 
 ***
 
-### Build (cc-build)
+### 🔨 Build (cc-build)
 __Description:__ Cookiecutter build automation utilities.
 
 #### Sub-commands: (readme, add-yaml-front-matter)
@@ -73,7 +74,7 @@ $ cc-build readme $(JEKYLL_DIR) ./README.md \
 
 ***
 
-## Template (cc-templates)
+## 🍪 Template (cc-templates)
 __Description:__ cc-templates tools.
 
 #### Sub-commands: (readme, add-yaml-front-matter)
@@ -86,28 +87,38 @@ $ cc-templates generate
 ***
 
 ## Development
-### Build environment (.venv)
+### 🐍️ Build environment (.venv)
 ``` shell
 $ make install  
 ```
-### Linting (ruff & yaml-lint)
+### 🔍 Linting (ruff & yaml-lint)
 2.
 ``` shell
 $ make lint-check  
 ```
-### Typechecking (mypy)
+``` shell
+$ make lint-fix  
+```
+### 🎨 Formating (black)
+```shell
+$ make format-check
+```
+```shell
+$ make format-fix
+```
+### 🧠 Typechecking (mypy)
 ``` shell
 $ make typecheck  
 ```
-### Testing (pytest)
+### 🧪 Testing (pytest)
 ``` shell
 $ make test  
 ```
-### Building (build)
+### 📦 Building (build)
 ```shell
 $ make build
 ```
-### Publishing (Twine)
+### 🚀 Publishing (Twine)
 ```shell
 $ make pubish
 ```
@@ -115,13 +126,6 @@ $ make pubish
 ``` shell
 $ make help  
 ```
-## Usage
-1. Source environment created by ```make install```.  
-``` shell
-$ source .venv  
-```
-
-***
 
 
 ### Authors Notes:  
