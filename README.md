@@ -13,8 +13,9 @@
 
 <hr />
 
-<h2 id="usage-commands">Usage (Commands)</h2>
-<h3 id="add-docs">Add Docs</h3>
+<h2 id="command-examples">Command Examples:</h2>
+<h3 id="-cc-utils-add_docs-extract-run-list">🔧 cc-utils (add_docs, extract, run, list)</h3>
+<h4 id="add-docs">Add Docs</h4>
 <p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.</p>
 <ol>
   <li>
@@ -23,7 +24,7 @@
   </li>
 </ol>
 
-<h3 id="extract">Extract</h3>
+<h4 id="extract">Extract</h4>
 <p><strong>Description:</strong> Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.</p>
 <ol>
   <li>
@@ -42,19 +43,19 @@
   </li>
 </ol>
 
-<h3 id="run">Run</h3>
+<h4 id="run">Run</h4>
 <p><strong>Description:</strong> Run a cookiecutter template using a pre-supplied JSON configuration file.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-utils run <span class="nt">--help</span>
 </code></pre></div></div>
 
-<h3 id="list">List</h3>
+<h4 id="list">List</h4>
 <p><strong>Description:</strong> List available cookiecutter templates under a namespace.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cc-utils list <span class="nt">--help</span>
 </code></pre></div></div>
 
 <hr />
 
-<h3 id="config-cc-config">Config (cc-config)</h3>
+<h3 id="️-config-cc-config">⚙️ Config (cc-config)</h3>
 <p><strong>Description:</strong> cc-utils configuration tools.</p>
 
 <h4 id="sub-commands-show">Sub-commands: (show)</h4>
@@ -66,7 +67,7 @@
 
 <hr />
 
-<h3 id="build-cc-build">Build (cc-build)</h3>
+<h3 id="-build-cc-build">🔨 Build (cc-build)</h3>
 <p><strong>Description:</strong> Cookiecutter build automation utilities.</p>
 
 <h4 id="sub-commands-readme-add-yaml-front-matter">Sub-commands: (readme, add-yaml-front-matter)</h4>
@@ -79,7 +80,7 @@
 
 <hr />
 
-<h2 id="template-cc-templates">Template (cc-templates)</h2>
+<h2 id="-template-cc-templates">🍪 Template (cc-templates)</h2>
 <p><strong>Description:</strong> cc-templates tools.</p>
 
 <h4 id="sub-commands-readme-add-yaml-front-matter-1">Sub-commands: (readme, add-yaml-front-matter)</h4>
@@ -91,37 +92,35 @@
 <hr />
 
 <h2 id="development">Development</h2>
-<h3 id="build-environment-venv">Build environment (.venv)</h3>
+<h3 id="️-build-environment-venv">🐍️ Build environment (.venv)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">install</span>  
 </code></pre></div></div>
-<h3 id="linting-ruff--yaml-lint">Linting (ruff &amp; yaml-lint)</h3>
+<h3 id="-linting-ruff--yaml-lint">🔍 Linting (ruff &amp; yaml-lint)</h3>
 <p>2.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-check  
 </code></pre></div></div>
-<h3 id="typechecking-mypy">Typechecking (mypy)</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-fix  
+</code></pre></div></div>
+<h3 id="-formating-black">🎨 Formating (black)</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-check
+</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-fix
+</code></pre></div></div>
+<h3 id="-typechecking-mypy">🧠 Typechecking (mypy)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make typecheck  
 </code></pre></div></div>
-<h3 id="testing-pytest">Testing (pytest)</h3>
+<h3 id="-testing-pytest">🧪 Testing (pytest)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">test</span>  
 </code></pre></div></div>
-<h3 id="building-build">Building (build)</h3>
+<h3 id="-building-build">📦 Building (build)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make build
 </code></pre></div></div>
-<h3 id="publishing-twine">Publishing (Twine)</h3>
+<h3 id="-publishing-twine">🚀 Publishing (Twine)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make pubish
 </code></pre></div></div>
 <h3 id="build-help">Build Help</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">help</span>  
 </code></pre></div></div>
-<h2 id="usage">Usage</h2>
-<ol>
-  <li>Source environment created by <code class="language-plaintext highlighter-rouge">make install</code>.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">source</span> .venv  
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<hr />
 
 <h3 id="authors-notes">Authors Notes:</h3>
 
