@@ -11,7 +11,7 @@ ccutils.core.config
 
 cc-utils Package
 
-Description: ccutils configuration initilization
+Description: cc-utils configuration initialization
 
 ### Functions
 
