@@ -35,6 +35,8 @@ copyright = "2025, Jared Cook"
 author = "Jared Cook"
 release = "0.1.1"
 
+# Main Sphinx Entry Point
+master_doc = 'api'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 

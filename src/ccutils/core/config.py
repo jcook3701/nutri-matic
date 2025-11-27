@@ -5,7 +5,7 @@
 See the LICENSE file for more details.
 
 Author: Jared Cook
-Description: ccutils configuration initilization
+Description: cc-utils configuration initialization
 """
 
 import json
