@@ -5,5 +5,5 @@
 See the LICENSE file for more details.
 
 Author: Jared Cook
-Description: Pre/Post Generation Logic initialization.
+Description: Pre Generation Logic initialization.
 """

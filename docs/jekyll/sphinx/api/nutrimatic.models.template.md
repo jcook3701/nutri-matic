@@ -41,7 +41,7 @@ Cookiecutter template version.
 
 #### description
 
-Cookiecutter project discription.
+Cookiecutter project description.
 
 #### variables
 

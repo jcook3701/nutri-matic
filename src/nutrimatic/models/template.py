@@ -25,7 +25,7 @@ class ConfigData(BaseModel):
          project_name: Cookiecutter
          author: Cookiecutter
          version: Cookiecutter template version.
-         description: Cookiecutter project discription.
+         description: Cookiecutter project description.
          variables: Cookiecutter project variables.
     """
 

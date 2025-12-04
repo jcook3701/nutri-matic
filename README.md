@@ -5,7 +5,7 @@
 -->
 <h1 id="nutri-matic">Nutri-Matic</h1>
 
-<p><strong>Author:</strong> Jared Cook<br />
+<p><strong>Author:</strong> Jared Cook
 <strong>Version:</strong> 0.1.2</p>
 
 <h2 id="overview">Overview</h2>
@@ -22,19 +22,16 @@
 <h2 id="command-examples">Command Examples:</h2>
 <h3 id="-nutrimatic-add_docs-extract-run-list">🔧 nutrimatic (add_docs, extract, run, list)</h3>
 <h4 id="add-docs">Add Docs:</h4>
-<p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.</p>
-<ol>
-  <li>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic add-docs <span class="si">$(</span>target_dir<span class="si">)</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
+<p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.
+1.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic add-docs <span class="si">$(</span>target_dir<span class="si">)</span>
+</code></pre></div></div>
 
 <h4 id="extract">Extract:</h4>
 <p><strong>Description:</strong> Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.</p>
 <ol>
   <li>Run extract command to local cookiecutter repository:
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic extract ./python3-cookiecutter  
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic extract ./python3-cookiecutter
 </code></pre></div>    </div>
     <p><strong>OR</strong></p>
   </li>
@@ -42,7 +39,7 @@
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic extract <span class="se">\</span>
  <span class="nt">--repo</span> git@github.com:jcook3701/python3-cookiecutter.git <span class="se">\</span>
  <span class="nt">--branch</span> develop <span class="se">\</span>
- <span class="nt">--output</span> clean_cookiecutter.json  
+ <span class="nt">--output</span> clean_cookiecutter.json
 </code></pre></div>    </div>
   </li>
   <li>Modify extracted json to meet you new projects requirements.</li>
@@ -61,7 +58,7 @@
 <hr />
 
 <h3 id="️-config-nm-config">⚙️ Config (nm-config)</h3>
-<p><strong>Description:</strong> nutrimatic configuration tools.<br />
+<p><strong>Description:</strong> nutrimatic configuration tools.
 <strong>Note:</strong> These are tools that are used to manage package configuration file.</p>
 
 <h4 id="sub-commands-show">Sub-commands: (show)</h4>
@@ -74,12 +71,12 @@
 <hr />
 
 <h3 id="-build-nm-build">🔨 Build (nm-build)</h3>
-<p><strong>Description:</strong> Cookiecutter build automation utilities.<br />
+<p><strong>Description:</strong> Cookiecutter build automation utilities.
 <strong>Note:</strong> These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.</p>
 <h4 id="sub-commands-readme-add-yaml-front-matter">Sub-commands: (readme, add-yaml-front-matter)</h4>
 
 <h4 id="readme">Readme:</h4>
-<p><strong>Description:</strong> Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.<br />
+<p><strong>Description:</strong> Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.
 <strong>Note</strong>: Replace with real values.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROJECT_ROOT :<span class="o">=</span> <span class="si">$(</span>PWD<span class="si">)</span>
 DOCS_DIR :<span class="o">=</span> <span class="si">$(</span>PROJECT_ROOT<span class="si">)</span>/docs
@@ -104,8 +101,8 @@ readme:
 <strong>Note:</strong> github-docs-cookiecutter will either be moved to <a href="https://github.com/jcook3701/cc-templates">cc-templates</a> or be added to cc-templates as a submodule.  #### Sub-commands: (generate)</p>
 
 <h4 id="generate">Generate:</h4>
-<p><strong>Description:</strong> This is for custom Cookiecutter template (<a href="https://github.com/jcook3701/cc-templates">cc-templates</a>) that utilizes ccmeta.toml files to organize projects.<br />
-<strong>Note:</strong> This feature is still in development.  <strong>(Use at your own risk!!!)</strong><br />
+<p><strong>Description:</strong> This is for custom Cookiecutter template (<a href="https://github.com/jcook3701/cc-templates">cc-templates</a>) that utilizes ccmeta.toml files to organize projects.
+<strong>Note:</strong> This feature is still in development.  <strong>(Use at your own risk!!!)</strong>
 <strong>Arguments:</strong></p>
 <ul>
   <li>repo: Path to the template repository to generate README.md and Makefile
@@ -119,12 +116,12 @@ readme:
 <h2 id="development-strategy">Development Strategy</h2>
 <p><strong>Note:</strong> All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.</p>
 <h3 id="️-build-environment-venv">🐍️ Build environment (.venv)</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">install</span>  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">install</span>
 </code></pre></div></div>
 <h3 id="-linting-ruff--yaml-lint">🔍 Linting (ruff &amp; yaml-lint)</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-check  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-check
 </code></pre></div></div>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-fix  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make lint-fix
 </code></pre></div></div>
 <h3 id="-formatting-black">🎨 Formatting (black)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-check
@@ -132,10 +129,10 @@ readme:
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make format-fix
 </code></pre></div></div>
 <h3 id="-typechecking-mypy">🧠 Typechecking (mypy)</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make typecheck  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make typecheck
 </code></pre></div></div>
 <h3 id="-testing-pytest">🧪 Testing (pytest)</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">test</span>  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">test</span>
 </code></pre></div></div>
 <h3 id="-version-bumping-bumpy-my-version">🔖 Version Bumping (bumpy-my-version)</h3>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make bump-version-patch
@@ -144,10 +141,10 @@ readme:
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make build
 </code></pre></div></div>
 <h3 id="-publishing-twine">🚀 Publishing (Twine)</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make pubish
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make publish
 </code></pre></div></div>
 <h3 id="build-help">Build Help</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">help</span>  
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">help</span>
 </code></pre></div></div>
 
 <hr />
@@ -175,8 +172,8 @@ readme:
 <!--
 
 2. Need to come up with a new name as ccutils and cc-utils are giving me issues on either pypi or testpypi.
-  * Thinking of going with Hitch Hikers Guide to Galaxy based names as this is becoming rediculious. 
-  
+  * Thinking of going with Hitch Hikers Guide to Galaxy based names as this is becoming rediculious.
+
 
 🧣📖🤖🧑‍🚀👽✨🚀🛸🪐🍹🧃
 
@@ -195,8 +192,8 @@ To replace cc-utils:
   4. ✅ improbability_core (claim)
   5. ✅ improb_core
   6. ✅ robot_marvin
-To replace cc-templates: 
-  1. ❌ NutriMatic 
+To replace cc-templates:
+  1. ❌ NutriMatic
   2. ✅ nutri_matic (claim)
 
 __Notes:__
@@ -206,7 +203,7 @@ __Notes:__
 "The answer to the great question...of Life, the Universe and Everything...is...forty-two."
 "For a moment, nothing happened. Then, after a second or so, nothing continued to happen."
 "I may not have gone where I intended to go, but I think I have ended up where I needed to be".
-"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move". 
+"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move".
 
 ##### Heart of Gold (cc-utils)
 1. “Hi there! This is Eddie, your shipboard computer, and I’m feeling just great, guys, and I know I’m just going to get a bundle of kicks out of any program you care to run through me.”

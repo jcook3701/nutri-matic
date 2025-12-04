@@ -11,9 +11,10 @@ nutrimatic.hooks
 
 nutri-matic Package
 
-Description: Pre/Post Generation Logic initialization.
+Description: Pre Generation Logic initialization.
 
 ### Modules
 
 | [`post_gen_logic`](nutrimatic.hooks.post_gen_logic.md#module-nutrimatic.hooks.post_gen_logic)   | nutri-matic Package   |
 |-------------------------------------------------------------------------------------------------|-----------------------|
+| [`pre_gen_logic`](nutrimatic.hooks.pre_gen_logic.md#module-nutrimatic.hooks.pre_gen_logic)      | nutri-matic Package   |

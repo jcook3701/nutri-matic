@@ -1,10 +1,10 @@
 # {{ site.title }}
 
-__Author:__ {{ site.author }}  
-__Version:__ {{ site.version }}  
+__Author:__ {{ site.author }}
+__Version:__ {{ site.version }}
 
 ## Overview
-{{ site.description }}  
+{{ site.description }}
 
 ***
 
@@ -17,36 +17,36 @@ __Version:__ {{ site.version }}
 ## Command Examples:
 ### 🔧 nutrimatic (add_docs, extract, run, list)
 #### Add Docs:
-__Description:__ Add GitHub docs to an existing project using the github-docs-cookiecutter template.  
-1. 
+__Description:__ Add GitHub docs to an existing project using the github-docs-cookiecutter template.
+1.
 ``` shell
 $ nutrimatic add-docs $(target_dir)
 ```
 
 #### Extract:
-__Description:__ Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.  
-1. Run extract command to local cookiecutter repository:  
+__Description:__ Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.
+1. Run extract command to local cookiecutter repository:
 ``` shell
-$ nutrimatic extract ./python3-cookiecutter  
+$ nutrimatic extract ./python3-cookiecutter
 ```
 __OR__
-2. Run extract command to remote github cookiecutter repository:  
+2. Run extract command to remote github cookiecutter repository:
 ``` shell
 $ nutrimatic extract \
     --repo git@github.com:jcook3701/python3-cookiecutter.git \
     --branch develop \
-    --output clean_cookiecutter.json  
+    --output clean_cookiecutter.json
 ```
-2. Modify extracted json to meet you new projects requirements.  
+2. Modify extracted json to meet you new projects requirements.
 
 #### Run:
-__Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.  
+__Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.
 ```shell
 $ nutrimatic run $(template) $(config)
 ```
 
 #### List:
-__Description:__ List available cookiecutter templates under a namespace.  
+__Description:__ List available cookiecutter templates under a namespace.
 ```shell
 $ nutrimatic list
 ```
@@ -54,8 +54,8 @@ $ nutrimatic list
 ***
 
 ### ⚙️ Config (nm-config)
-__Description:__ nutrimatic configuration tools.  
-__Note:__ These are tools that are used to manage package configuration file.  
+__Description:__ nutrimatic configuration tools.
+__Note:__ These are tools that are used to manage package configuration file.
 
 #### Sub-commands: (show)
 
@@ -68,13 +68,13 @@ $ nm-config show
 ***
 
 ### 🔨 Build (nm-build)
-__Description:__ Cookiecutter build automation utilities.  
-__Note:__ These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile. 
+__Description:__ Cookiecutter build automation utilities.
+__Note:__ These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.
 #### Sub-commands: (readme, add-yaml-front-matter)
 
 #### Readme:
-__Description:__ Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.  
-__Note__: Replace with real values.  
+__Description:__ Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.
+__Note__: Replace with real values.
 ```shell
 PROJECT_ROOT := $(PWD)
 DOCS_DIR := $(PROJECT_ROOT)/docs
@@ -88,7 +88,7 @@ readme:
 ```
 
 #### add-yaml-front-matter:
-__Description:__ This adds yaml-front-matter to the head of (md, yml, & yaml) files to help beautify github docs.  Intended to be used with [github-docs-cookiecutter](https://github.com/jcook3701/github-docs-cookiecutter)  
+__Description:__ This adds yaml-front-matter to the head of (md, yml, & yaml) files to help beautify github docs.  Intended to be used with [github-docs-cookiecutter](https://github.com/jcook3701/github-docs-cookiecutter)
 ```shell
 $ nm-build add-yaml-front-matter
 ```
@@ -99,9 +99,9 @@ $ nm-build add-yaml-front-matter
 __Description:__ nm-templates tools.
 __Note:__ github-docs-cookiecutter will either be moved to [cc-templates](https://github.com/jcook3701/cc-templates) or be added to cc-templates as a submodule.  #### Sub-commands: (generate)
 
-#### Generate: 
-__Description:__ This is for custom Cookiecutter template ([cc-templates](https://github.com/jcook3701/cc-templates)) that utilizes ccmeta.toml files to organize projects.  
-__Note:__ This feature is still in development.  __(Use at your own risk!!!)__  
+#### Generate:
+__Description:__ This is for custom Cookiecutter template ([cc-templates](https://github.com/jcook3701/cc-templates)) that utilizes ccmeta.toml files to organize projects.
+__Note:__ This feature is still in development.  __(Use at your own risk!!!)__
 __Arguments:__
   * repo: Path to the template repository to generate README.md and Makefile
 ```shell
@@ -111,17 +111,17 @@ $ nm-templates generate $(repo)
 ***
 
 ## Development Strategy
-__Note:__ All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.  
+__Note:__ All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.
 ### 🐍️ Build environment (.venv)
 ``` shell
-$ make install  
+$ make install
 ```
 ### 🔍 Linting (ruff & yaml-lint)
 ``` shell
-$ make lint-check  
+$ make lint-check
 ```
 ``` shell
-$ make lint-fix  
+$ make lint-fix
 ```
 ### 🎨 Formatting (black)
 ```shell
@@ -132,11 +132,11 @@ $ make format-fix
 ```
 ### 🧠 Typechecking (mypy)
 ``` shell
-$ make typecheck  
+$ make typecheck
 ```
 ### 🧪 Testing (pytest)
 ``` shell
-$ make test  
+$ make test
 ```
 ### 🔖 Version Bumping (bumpy-my-version)
 ```shell
@@ -148,11 +148,11 @@ $ make build
 ```
 ### 🚀 Publishing (Twine)
 ```shell
-$ make pubish
+$ make publish
 ```
 ### Build Help
 ``` shell
-$ make help  
+$ make help
 ```
 
 ***
@@ -175,8 +175,8 @@ Their fundamental design flaws are completely hidden by their superficial design
 <!--
 
 2. Need to come up with a new name as ccutils and cc-utils are giving me issues on either pypi or testpypi.
-  * Thinking of going with Hitch Hikers Guide to Galaxy based names as this is becoming rediculious. 
-  
+  * Thinking of going with Hitch Hikers Guide to Galaxy based names as this is becoming rediculious.
+
 
 🧣📖🤖🧑‍🚀👽✨🚀🛸🪐🍹🧃
 
@@ -195,8 +195,8 @@ To replace cc-utils:
   4. ✅ improbability_core (claim)
   5. ✅ improb_core
   6. ✅ robot_marvin
-To replace cc-templates: 
-  1. ❌ NutriMatic 
+To replace cc-templates:
+  1. ❌ NutriMatic
   2. ✅ nutri_matic (claim)
 
 __Notes:__
@@ -206,7 +206,7 @@ __Notes:__
 "The answer to the great question...of Life, the Universe and Everything...is...forty-two."
 "For a moment, nothing happened. Then, after a second or so, nothing continued to happen."
 "I may not have gone where I intended to go, but I think I have ended up where I needed to be".
-"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move". 
+"The story so far: In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move".
 
 ##### Heart of Gold (cc-utils)
 1. “Hi there! This is Eddie, your shipboard computer, and I’m feeling just great, guys, and I know I’m just going to get a bundle of kicks out of any program you care to run through me.”

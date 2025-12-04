@@ -29,7 +29,7 @@ dependencies = [
   "types-requests>=2.32",
   "types-PyYAML>=6.0",
   "types-toml>=0.10",
-] 
+]
 keywords = [
   "python3",
   "cookiecutter",
@@ -47,16 +47,21 @@ Documentation = "https://github.com/jcook3701/nutri-matic/docs/jekyll"
 
 [project.optional-dependencies]
 dev = [
+  "black>=25.11",
   "build>=1.3",
   "bump-my-version>=1.2",
+  "codespell>=2.4",
   "coverage>=7.12",
-  "black>=25.11",
-  "ruff>=0.14.0",
+  "deptry>=0.24",
   "mypy==1.9",
   "myst-parser>=0.18",
+  "pip-audit>=2.10",
+  "pre-commit>=4.5",
   "nameisok>=0.1",
   "pytest>=8.0",
   "pytest-cov>=7.0",
+  "ruff>=0.14.0",
+  "tomllint>=0.3",
   "yamllint>=1.0",
   "twine>=6.2",
 ]
@@ -109,6 +114,29 @@ filename = "./docs/jekyll/Makefile"
 filename = "./docs/jekyll/_config.yml"
 [[tool.bumpversion.files]]
 filename = "./docs/sphinx/conf.py"
+# ====================================
+# Codespell Configuration:
+# ====================================
+[tool.codespell]
+# files/patterns to ignore
+skip = "./CHANGELOG.md,./docs/jekyll/_site,*.svg,*.css,*.html,*.lock"
+
+# words to ignore globally
+ignore-words-list = ["crate", "ba"]
+
+# extra options
+check-filenames = true
+# quiet-level = 2
+# ====================================
+# Deptry Configuration:
+# ====================================
+[tool.deptry]
+ignore_notebooks = true
+exclude = [
+    "tests/*",
+    "build/*",
+    "docs/*",
+]
 # ====================================
 # Ruff Configuration: (linter, formatter, import sorter)
 # ====================================
@@ -201,7 +229,7 @@ exclude = '''
 # Mypy (type-checker) Configuration:
 # ====================================
 [tool.mypy]
-python_version = 3.11
+python_version = "3.11"
 mypy_path = "src"
 strict = true
 warn_unused_ignores = true
