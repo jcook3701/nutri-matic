@@ -80,6 +80,7 @@
 
 - Fixed removal of dependencies
 - Fixed makefile so clean wont remove sphinx docs again.
+- *(dependencies)* Fixed errors from deptry.
 
 ### 🚀 Added
 

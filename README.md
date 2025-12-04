@@ -5,7 +5,7 @@
 -->
 <h1 id="nutri-matic">Nutri-Matic</h1>
 
-<p><strong>Author:</strong> Jared Cook
+<p><strong>Author:</strong> Jared Cook<br />
 <strong>Version:</strong> 0.1.2</p>
 
 <h2 id="overview">Overview</h2>
@@ -61,7 +61,7 @@
 <hr />
 
 <h3 id="️-config-nm-config">⚙️ Config (nm-config)</h3>
-<p><strong>Description:</strong> nutrimatic configuration tools.
+<p><strong>Description:</strong> nutrimatic configuration tools.<br />
 <strong>Note:</strong> These are tools that are used to manage package configuration file.</p>
 
 <h4 id="sub-commands-show">Sub-commands: (show)</h4>
@@ -74,12 +74,12 @@
 <hr />
 
 <h3 id="-build-nm-build">🔨 Build (nm-build)</h3>
-<p><strong>Description:</strong> Cookiecutter build automation utilities.
+<p><strong>Description:</strong> Cookiecutter build automation utilities.<br />
 <strong>Note:</strong> These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.</p>
 <h4 id="sub-commands-readme-add-yaml-front-matter">Sub-commands: (readme, add-yaml-front-matter)</h4>
 
 <h4 id="readme">Readme:</h4>
-<p><strong>Description:</strong> Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.
+<p><strong>Description:</strong> Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.<br />
 <strong>Note</strong>: Replace with real values.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROJECT_ROOT :<span class="o">=</span> <span class="si">$(</span>PWD<span class="si">)</span>
 DOCS_DIR :<span class="o">=</span> <span class="si">$(</span>PROJECT_ROOT<span class="si">)</span>/docs
@@ -100,12 +100,12 @@ readme:
 <hr />
 
 <h2 id="-template-nm-templates">🍪 Template (nm-templates)</h2>
-<p><strong>Description:</strong> nm-templates tools.
+<p><strong>Description:</strong> nm-templates tools.<br />
 <strong>Note:</strong> github-docs-cookiecutter will either be moved to <a href="https://github.com/jcook3701/cc-templates">cc-templates</a> or be added to cc-templates as a submodule.  #### Sub-commands: (generate)</p>
 
 <h4 id="generate">Generate:</h4>
-<p><strong>Description:</strong> This is for custom Cookiecutter template (<a href="https://github.com/jcook3701/cc-templates">cc-templates</a>) that utilizes ccmeta.toml files to organize projects.
-<strong>Note:</strong> This feature is still in development.  <strong>(Use at your own risk!!!)</strong>
+<p><strong>Description:</strong> This is for custom Cookiecutter template (<a href="https://github.com/jcook3701/cc-templates">cc-templates</a>) that utilizes ccmeta.toml files to organize projects.<br />
+<strong>Note:</strong> This feature is still in development.  <strong>(Use at your own risk!!!)</strong><br />
 <strong>Arguments:</strong></p>
 <ul>
   <li>repo: Path to the template repository to generate README.md and Makefile
@@ -223,8 +223,8 @@ cc-sphinx-docs
 cc-github-docs
 -->
 
-<h2 id="package">Package:</h2>
-<h3 id="pypi-stable">PyPi: (stable)</h3>
-<p>https://pypi.org/project/nutri-matic/</p>
-<h3 id="testpypi-development">TestPyPi: (development)</h3>
-<p>https://test.pypi.org/project/nutri-matic/</p>
+<h2 id="package-information">Package Information:</h2>
+<h3 id="pypi-stable"><a href="https://pypi.org/project/nutri-matic/">PyPi:</a> (stable)</h3>
+<h3 id="testpypi-development"><a href="https://test.pypi.org/project/nutri-matic/">TestPyPi:</a> (development)</h3>
+<h3 id="github"><a href="https://github.com/jcook3701/nutri-matic/">GitHub:</a></h3>
+<h3 id="gitdocs"><a href="https://jcook3701.github.io/nutri-matic/">GitDocs:</a></h3>

@@ -1,7 +1,7 @@
 # {{ site.title }}
 
-__Author:__ {{ site.author }}
-__Version:__ {{ site.version }}
+__Author:__ {{ site.author }}  
+__Version:__ {{ site.version }}  
 
 ## Overview
 {{ site.description }}
@@ -57,8 +57,8 @@ $ nutrimatic list
 ***
 
 ### ⚙️ Config (nm-config)
-__Description:__ nutrimatic configuration tools.
-__Note:__ These are tools that are used to manage package configuration file.
+__Description:__ nutrimatic configuration tools.  
+__Note:__ These are tools that are used to manage package configuration file.  
 
 #### Sub-commands: (show)
 
@@ -71,13 +71,13 @@ $ nm-config show
 ***
 
 ### 🔨 Build (nm-build)
-__Description:__ Cookiecutter build automation utilities.
-__Note:__ These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.
+__Description:__ Cookiecutter build automation utilities.  
+__Note:__ These commands are intended to be used within project Makefiles as build tools. Examples will assume for use in Makefile.  
 #### Sub-commands: (readme, add-yaml-front-matter)
 
 #### Readme:
-__Description:__ Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.
-__Note__: Replace with real values.
+__Description:__ Generates project readme from projects github-docs jekyll project.  The intention is keep the readme within ./docs/jekyll as the projects single source of truth.  
+__Note__: Replace with real values.  
 ```shell
 PROJECT_ROOT := $(PWD)
 DOCS_DIR := $(PROJECT_ROOT)/docs
@@ -99,12 +99,12 @@ $ nm-build add-yaml-front-matter
 ***
 
 ## 🍪 Template (nm-templates)
-__Description:__ nm-templates tools.
-__Note:__ github-docs-cookiecutter will either be moved to [cc-templates](https://github.com/jcook3701/cc-templates) or be added to cc-templates as a submodule.  #### Sub-commands: (generate)
+__Description:__ nm-templates tools.  
+__Note:__ github-docs-cookiecutter will either be moved to [cc-templates](https://github.com/jcook3701/cc-templates) or be added to cc-templates as a submodule.  #### Sub-commands: (generate)  
 
 #### Generate:
-__Description:__ This is for custom Cookiecutter template ([cc-templates](https://github.com/jcook3701/cc-templates)) that utilizes ccmeta.toml files to organize projects.
-__Note:__ This feature is still in development.  __(Use at your own risk!!!)__
+__Description:__ This is for custom Cookiecutter template ([cc-templates](https://github.com/jcook3701/cc-templates)) that utilizes ccmeta.toml files to organize projects.  
+__Note:__ This feature is still in development.  __(Use at your own risk!!!)__  
 __Arguments:__
   * repo: Path to the template repository to generate README.md and Makefile
 ```shell
@@ -114,7 +114,7 @@ $ nm-templates generate $(repo)
 ***
 
 ## Development Strategy
-__Note:__ All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.
+__Note:__ All Makefile commands are used in ci/cd to ensure that if they pass locally they should also pass once pushed to github.  
 ### 🐍️ Build environment (.venv)
 ``` shell
 $ make install
@@ -227,8 +227,8 @@ cc-github-docs
 -->
 
 
-## Package:
-### PyPi: (stable)
-https://pypi.org/project/{{ site.repo_name }}/
-### TestPyPi: (development)
-https://test.pypi.org/project/{{ site.repo_name }}/
+## Package Information:
+### [PyPi:](https://pypi.org/project/{{ site.repo_name }}/) (stable)  
+### [TestPyPi:](https://test.pypi.org/project/{{ site.repo_name }}/) (development)  
+### [GitHub:](https://github.com/jcook3701/{{ site.repo_name }}/)  
+### [GitDocs:](https://jcook3701.github.io/{{ site.repo_name }}/)  
