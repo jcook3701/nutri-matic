@@ -84,6 +84,10 @@
 - *(docs)* Updates to pre-commit to not remove double spaces from markdown files and fixed main readme file.
 - *(changelogs)* Got changelogs setup how I actually want.  Now there should be a seperate changelog per a release as well as a running changelog.  Major updates to ci/cd as well.
 
+### 📚 Documentation
+
+- *(readme)* Updates for development cycle explanation.
+
 ### 🚀 Added
 
 - *(build)* CI/CD updates and major updates to use pre-commit, codespell, deptry, & pip-audit. Also setup configuration for git-cliff chanagelog generation.

@@ -120,7 +120,7 @@ __Description:__ This creates python virtual environment and installs all necess
 ``` shell
 $ make install
 ```
-### CI/CD Checklist 🧬🛡️🎨🔍🎓🧠🧪:
+### 🧬🛡️🎨🔍🎓🧠🧪 CI/CD Checklist:
 __Description:__  Runs all checks that are used for CI/CD.  This should pass without error before attempting a pull-request.  
 __Note:__ All Makefile commands are used in CI/CD to ensure that if they pass locally they should also pass once pushed to github.  
 ```shell
