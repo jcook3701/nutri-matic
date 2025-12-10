@@ -122,12 +122,12 @@ readme:
 <p><strong>Description:</strong> This creates python virtual environment and installs all necessary packages.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nb">install</span>
 </code></pre></div></div>
-<h3 id="️-cicd-checklist">🧬🛡️🎨🔍🎓🧠🧪 CI/CD Checklist:</h3>
+<h3 id="cicd-checklist---️----------">CI/CD Checklist: <code class="language-plaintext highlighter-rouge">🧬 + 🛡️ + 🎨 + 🔍 + 🎓 + 🧠 + 🧪</code></h3>
 <p><strong>Description:</strong>  Runs all checks that are used for CI/CD.  This should pass without error before attempting a pull-request.<br />
 <strong>Note:</strong> All Makefile commands are used in CI/CD to ensure that if they pass locally they should also pass once pushed to github.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make pre-commit
 </code></pre></div></div>
-<h3 id="-test-release-project-test-pypi">📢 Test Release Project (Test PyPi):</h3>
+<h3 id="--test-release-project-test-pypi">🧪 📢 Test Release Project (Test PyPi):</h3>
 <p><strong>Description:</strong> This runs the entire build cycle and results in a new test release to <a href="https://test.pypi.org/project/nutri-matic/">test.pypi</a>.</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make test-release
 </code></pre></div></div>
