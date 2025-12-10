@@ -21,7 +21,7 @@ __Version:__ {{ site.version }}
 
 ## 📦 Package Information:
 __GitHub:__ [Source Code](https://github.com/jcook3701/{{ site.repo_name }}/)  
-__GitDocs:__ [Api Documentation]((https://jcook3701.github.io/{{ site.repo_name }}/))  
+__GitDocs:__ [Api Documentation](https://jcook3701.github.io/{{ site.repo_name }}/)  
 
 ## 📦 Package Installation:
 __PyPi:__ ([stable](https://pypi.org/project/{{ site.repo_name }}/))  

@@ -201,3 +201,4 @@ Co-authored-by: jcook3701 <jcook3701@gmail.com>
 ### 📚 Documentation
 
 - *(jekyll)* Fixed it so that sphinx api now shows correctly along with General FAQ's.
+- *(readme)* Updates to include Package Installation with pip and information leading to github docs.

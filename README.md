@@ -26,7 +26,7 @@
 
 <h2 id="-package-information">📦 Package Information:</h2>
 <p><strong>GitHub:</strong> <a href="https://github.com/jcook3701/nutri-matic/">Source Code</a><br />
-<strong>GitDocs:</strong> <a href="(https://jcook3701.github.io/nutri-matic/)">Api Documentation</a></p>
+<strong>GitDocs:</strong> <a href="https://jcook3701.github.io/nutri-matic/">Api Documentation</a></p>
 
 <h2 id="-package-installation">📦 Package Installation:</h2>
 <p><strong>PyPi:</strong> (<a href="https://pypi.org/project/nutri-matic/">stable</a>)</p>
