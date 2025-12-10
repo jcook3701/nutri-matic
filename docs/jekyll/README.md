@@ -17,6 +17,22 @@ __Version:__ {{ site.version }}
 ![typecheck](https://github.com/{{ site.github_username }}/{{ site.repo_name }}/actions/workflows/typecheck.yml/badge.svg)
 ![yaml-lint](https://github.com/{{ site.github_username }}/{{ site.repo_name }}/actions/workflows/yaml-lint.yml/badge.svg)
 
+***
+
+## 📦 Package Information:
+__GitHub:__ [Source Code](https://github.com/jcook3701/{{ site.repo_name }}/)  
+__GitDocs:__ [Api Documentation]((https://jcook3701.github.io/{{ site.repo_name }}/))  
+
+## 📦 Package Installation:
+__PyPi:__ ([stable](https://pypi.org/project/{{ site.repo_name }}/))  
+```shell
+$ python -m pip install nutri-matic
+```
+__TestPyPi:__ ([development](https://test.pypi.org/project/{{ site.repo_name }}/))  
+```shell
+$ python -m pip install -i https://test.pypi.org/simple/ nutri-matic
+```
+
 ## Command Examples:
 ### 🔧 nutrimatic (add_docs, extract, run, list)
 #### Add Docs:
@@ -298,11 +314,6 @@ cc-github-docs
 -->
 
 
-## Package Information:
-### [PyPi:](https://pypi.org/project/{{ site.repo_name }}/) (stable)  
-### [TestPyPi:](https://test.pypi.org/project/{{ site.repo_name }}/) (development)  
-### [GitHub:](https://github.com/jcook3701/{{ site.repo_name }}/)  
-### [GitDocs:](https://jcook3701.github.io/{{ site.repo_name }}/)  
 
 
 <!--

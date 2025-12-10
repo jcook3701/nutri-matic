@@ -22,6 +22,20 @@
 <img src="https://github.com/jcook3701/nutri-matic/actions/workflows/typecheck.yml/badge.svg" alt="typecheck" />
 <img src="https://github.com/jcook3701/nutri-matic/actions/workflows/yaml-lint.yml/badge.svg" alt="yaml-lint" /></p>
 
+<hr />
+
+<h2 id="-package-information">📦 Package Information:</h2>
+<p><strong>GitHub:</strong> <a href="https://github.com/jcook3701/nutri-matic/">Source Code</a><br />
+<strong>GitDocs:</strong> <a href="(https://jcook3701.github.io/nutri-matic/)">Api Documentation</a></p>
+
+<h2 id="-package-installation">📦 Package Installation:</h2>
+<p><strong>PyPi:</strong> (<a href="https://pypi.org/project/nutri-matic/">stable</a>)</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python <span class="nt">-m</span> pip <span class="nb">install </span>nutri-matic
+</code></pre></div></div>
+<p><strong>TestPyPi:</strong> (<a href="https://test.pypi.org/project/nutri-matic/">development</a>)</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-i</span> https://test.pypi.org/simple/ nutri-matic
+</code></pre></div></div>
+
 <h2 id="command-examples">Command Examples:</h2>
 <h3 id="-nutrimatic-add_docs-extract-run-list">🔧 nutrimatic (add_docs, extract, run, list)</h3>
 <h4 id="add-docs">Add Docs:</h4>
@@ -289,12 +303,6 @@ cc-ansible-role
 cc-sphinx-docs
 cc-github-docs
 -->
-
-<h2 id="package-information">Package Information:</h2>
-<h3 id="pypi-stable"><a href="https://pypi.org/project/nutri-matic/">PyPi:</a> (stable)</h3>
-<h3 id="testpypi-development"><a href="https://test.pypi.org/project/nutri-matic/">TestPyPi:</a> (development)</h3>
-<h3 id="github"><a href="https://github.com/jcook3701/nutri-matic/">GitHub:</a></h3>
-<h3 id="gitdocs"><a href="https://jcook3701.github.io/nutri-matic/">GitDocs:</a></h3>
 
 <!--
 # Authors Second Hidden Notes:
