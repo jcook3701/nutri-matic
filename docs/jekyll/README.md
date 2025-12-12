@@ -46,7 +46,6 @@ $ python -m pip install -i https://test.pypi.org/simple/ nutri-matic
 #### Add Docs:
 
 __Description:__ Add GitHub docs to an existing project using the github-docs-cookiecutter template.
-1.
 
 ``` shell
 $ nutrimatic add-docs $(target_dir)
@@ -56,14 +55,13 @@ $ nutrimatic add-docs $(target_dir)
 
 __Description:__ Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.
 
-1. Run extract command to local cookiecutter repository:
+Run extract command to local cookiecutter repository:
 
 ``` shell
 $ nutrimatic extract ./python3-cookiecutter
 ```
 
-__OR__
-2. Run extract command to remote github cookiecutter repository:
+__OR:__ Run extract command to from github cookiecutter repository:
 
 ``` shell
 $ nutrimatic extract \
@@ -72,11 +70,11 @@ $ nutrimatic extract \
     --output clean_cookiecutter.json
 ```
 
-3. Modify extracted json to meet you new projects requirements.
+__AFTER:__ Modify extracted json to meet you new projects requirements.
 
 #### Run:
 
-__Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.
+__Description:__ Run a cookiecutter template using a pre-supplied JSON configuration file.  
 
 ```shell
 $ nutrimatic run $(template) $(config)
@@ -84,7 +82,7 @@ $ nutrimatic run $(template) $(config)
 
 #### List:
 
-__Description:__ List available cookiecutter templates under a namespace.
+__Description:__ List available cookiecutter templates under a namespace.  
 
 ```shell
 $ nutrimatic list
@@ -300,13 +298,13 @@ __example:__
 
 ## Requirements:  
 
-1. Python 3.11  
+__Python 3.11__  
 
 ```shell
 $ sudo apt install python3.11
 ```
 
-2. [rustup](https://rust-lang.org/tools/install/)  
+__[rustup](https://rust-lang.org/tools/install/)__  
 
 __Note:__ I found that it is easiest to use rustup to manage rustc and cargo but this is not required.  
 __Example:__ Install rustup with the following:  
@@ -315,7 +313,7 @@ __Example:__ Install rustup with the following:
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-3. [git-cliff](https://git-cliff.org/)  
+__[git-cliff](https://git-cliff.org/)__  
 
 __Note:__ git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers.  
 

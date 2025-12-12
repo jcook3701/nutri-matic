@@ -48,8 +48,7 @@
 
 <h4 id="add-docs">Add Docs:</h4>
 
-<p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.
-1.</p>
+<p><strong>Description:</strong> Add GitHub docs to an existing project using the github-docs-cookiecutter template.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic add-docs <span class="si">$(</span>target_dir<span class="si">)</span>
 </code></pre></div></div>
@@ -58,17 +57,12 @@
 
 <p><strong>Description:</strong> Clone a repo, extract cookiecutter.json, remove Jinja placeholders, save locally.</p>
 
-<ol>
-  <li>Run extract command to local cookiecutter repository:</li>
-</ol>
+<p>Run extract command to local cookiecutter repository:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic extract ./python3-cookiecutter
 </code></pre></div></div>
 
-<p><strong>OR</strong></p>
-<ol>
-  <li>Run extract command to remote github cookiecutter repository:</li>
-</ol>
+<p><strong>OR:</strong> Run extract command to from github cookiecutter repository:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nutrimatic extract <span class="se">\</span>
     <span class="nt">--repo</span> git@github.com:jcook3701/python3-cookiecutter.git <span class="se">\</span>
@@ -76,9 +70,7 @@
     <span class="nt">--output</span> clean_cookiecutter.json
 </code></pre></div></div>
 
-<ol>
-  <li>Modify extracted json to meet you new projects requirements.</li>
-</ol>
+<p><strong>AFTER:</strong> Modify extracted json to meet you new projects requirements.</p>
 
 <h4 id="run">Run:</h4>
 
@@ -286,16 +278,12 @@ readme:
 
 <h2 id="requirements">Requirements:</h2>
 
-<ol>
-  <li>Python 3.11</li>
-</ol>
+<p><strong>Python 3.11</strong></p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>python3.11
 </code></pre></div></div>
 
-<ol>
-  <li><a href="https://rust-lang.org/tools/install/">rustup</a></li>
-</ol>
+<p><strong><a href="https://rust-lang.org/tools/install/">rustup</a></strong></p>
 
 <p><strong>Note:</strong> I found that it is easiest to use rustup to manage rustc and cargo but this is not required.<br />
 <strong>Example:</strong> Install rustup with the following:</p>
@@ -303,9 +291,7 @@ readme:
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
 </code></pre></div></div>
 
-<ol>
-  <li><a href="https://git-cliff.org/">git-cliff</a></li>
-</ol>
+<p><strong><a href="https://git-cliff.org/">git-cliff</a></strong></p>
 
 <p><strong>Note:</strong> git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers.</p>
 
