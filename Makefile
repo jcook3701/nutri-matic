@@ -41,7 +41,7 @@ endef
 # --------------------------------------------------
 PACKAGE_NAME := "nutri-matic"
 AUTHOR := "Jared Cook"
-VERSION := "0.1.3"
+VERSION := "0.1.4"
 RELEASE := v$(VERSION)
 # --------------------------------------------------
 # 🐙 Github Build Settings

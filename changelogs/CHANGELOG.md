@@ -2,6 +2,11 @@
 # Changelog:
 # --------------------------------------------------
 
+## [unreleased]
+
+### 🚀 Added
+
+- *(github)* Got gh release create working.
 ## [0.1.3] - 2025-12-12
 
 ### ⚙️  Miscellaneous
