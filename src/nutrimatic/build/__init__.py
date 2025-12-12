@@ -10,21 +10,21 @@ Description: Initialization of Build Utilities
 
 # from .ansible
 from .readme import readme_generator
+from .sphinx import add_yaml_front_matter, clean_module_docstring, skip_dupes
 from .yaml_front_matter import (
-    compute_folder_depth,
-    build_front_matter,
     add_front_matter_to_dir,
     add_front_matter_to_file,
+    build_front_matter,
+    compute_folder_depth,
 )
-from .sphinx import clean_module_docstring, add_yaml_front_matter, skip_dupes
 
 __all__ = [
-    "compute_folder_depth",
-    "build_front_matter",
-    "readme_generator",
     "add_front_matter_to_dir",
     "add_front_matter_to_file",
-    "clean_module_docstring",
     "add_yaml_front_matter",
+    "build_front_matter",
+    "clean_module_docstring",
+    "compute_folder_depth",
+    "readme_generator",
     "skip_dupes",
 ]

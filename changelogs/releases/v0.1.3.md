@@ -216,6 +216,7 @@ Feat 001 (#5)
 ### 🐛 Fixed
 
 - *(ci/cd)* Fixed ci/cd so that it should now also run correct checks for feature branches.
+- *(spelling)* Corrected spelling errors.
 
 ### 🚀 Added
 

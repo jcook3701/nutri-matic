@@ -13,35 +13,6 @@ nutri-matic Package
 
 Description: Initialization of Build Utilities
 
-### nutrimatic.build.compute_folder_depth(file_path)
-
-* **Return type:**
-  `int`
-
-### nutrimatic.build.build_front_matter(file_path, depth, project)
-
-Builds front matter for a file.
-
-* **Parameters:**
-  * **file_path** (*Path*) -- \_description_
-  * **project** (*str* *|* *None* *,* *optional*) -- \_description_. Defaults to None.
-* **Returns:**
-  Returns front matter as a string.
-* **Return type:**
-  str
-
-### nutrimatic.build.readme_generator(jekyll_dir, output_file, readme_gen_dir, jekyll_build_cmd)
-
-\_summary_
-
-* **Parameters:**
-  * **jekyll_dir** (*Path*) -- \_description_
-  * **output_file** (*Path*) -- \_description_
-  * **readme_gen_dir** (*Path*) -- \_description_
-  * **jekyll_build_cmd** (*str*) -- \_description_
-* **Return type:**
-  `None`
-
 ### nutrimatic.build.add_front_matter_to_dir(directory, extensions, project=None)
 
 Walk a directory recursively, adding front matter to all valid extensions.
@@ -58,6 +29,25 @@ Returns True if modified, False if skipped.
 * **Return type:**
   `bool`
 
+### nutrimatic.build.add_yaml_front_matter(app, docname, source)
+
+Prepend YAML front-matter to every generated Markdown page.
+
+* **Return type:**
+  `None`
+
+### nutrimatic.build.build_front_matter(file_path, depth, project)
+
+Builds front matter for a file.
+
+* **Parameters:**
+  * **file_path** (*Path*) -- \_description_
+  * **project** (*str* *|* *None* *,* *optional*) -- \_description_. Defaults to None.
+* **Returns:**
+  Returns front matter as a string.
+* **Return type:**
+  str
+
 ### nutrimatic.build.clean_module_docstring(app, what, name, obj, options, lines)
 
 Skip module docstrings. Remove the '© All rights reserved'
@@ -67,10 +57,20 @@ module-level docstrings.
 * **Return type:**
   `None`
 
-### nutrimatic.build.add_yaml_front_matter(app, docname, source)
+### nutrimatic.build.compute_folder_depth(file_path)
 
-Prepend YAML front-matter to every generated Markdown page.
+* **Return type:**
+  `int`
 
+### nutrimatic.build.readme_generator(jekyll_dir, output_file, readme_gen_dir, jekyll_build_cmd)
+
+\_summary_
+
+* **Parameters:**
+  * **jekyll_dir** (*Path*) -- \_description_
+  * **output_file** (*Path*) -- \_description_
+  * **readme_gen_dir** (*Path*) -- \_description_
+  * **jekyll_build_cmd** (*str*) -- \_description_
 * **Return type:**
   `None`
 

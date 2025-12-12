@@ -9,17 +9,16 @@ Description: These functions are intended to be imported directly into Sphinx co
 and used in setup function.
 """
 
-import os
 import re
-
 from pathlib import Path
 from typing import Any
+
 from sphinx.application import Sphinx
 
-from .yaml_front_matter import compute_folder_depth, build_front_matter
+from .yaml_front_matter import build_front_matter, compute_folder_depth
 
 
-def clean_module_docstring(
+def clean_module_docstring(  # noqa: PLR0913
     app: Sphinx,
     what: str,
     name: str,
@@ -60,7 +59,7 @@ def add_yaml_front_matter(app: Sphinx, docname: str, source: list[str]) -> None:
     source[0] = front_matter + source[0]
 
 
-def skip_dupes(
+def skip_dupes(  # noqa: PLR0913
     app: Sphinx, what: str, name: str, obj: Any, skip: bool, options: Any
 ) -> bool:
     """Skip all Pydantic internal attributes"""

@@ -35,7 +35,6 @@ def build_front_matter(
     Returns:
         str: Returns front matter as a string.
     """
-    print(f"file_path: {file_path} and depth: {depth} - ")
     parent_name = (
         project or file_path.parent.name
         if file_path.parent.name == ""
@@ -64,11 +63,7 @@ def add_front_matter_to_file(
     """
     project_name = project or "unknown_project"
 
-    original_content = (
-        file_path.read_text(encoding="utf-8")
-        if file_path.exists()
-        else file_path.read_text(encoding="utf-8")
-    )
+    original_content = file_path.read_text(encoding="utf-8")
     # Skip if file already begins with '---'
     if original_content.lstrip().startswith("---"):
         return False

@@ -153,7 +153,6 @@ src = [
 # Exclude these paths
 exclude = [
   ".venv",
-  "build",
   "dist",
   "__pycache__",
   "docs",
