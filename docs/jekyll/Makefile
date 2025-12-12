@@ -38,7 +38,7 @@ PACKAGE_NAME := "nutri-matic"
 AUTHOR := "Jared Cook"
 VERSION := "0.1.3"
 # --------------------------------------------------
-# 📘 Documentation (Jekyll)
+# 📚 Documentation (Jekyll)
 # --------------------------------------------------
 JEKYLL_BUILD := bundle exec jekyll build --quiet
 JEKYLL_CLEAN := bundle exec jekyll clean

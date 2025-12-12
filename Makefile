@@ -369,14 +369,20 @@ release: pre-release publish git-release bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
 # --------------------------------------------------
-clean:
-	$(AT)echo "🧹 Cleaning build artifacts..."
+clean-docs:
+	$(AT)echo "🧹 Clening documentation artifacts..."
 	$(AT)$(MAKE) -C $(JEKYLL_DIR) clean
 	$(AT)$(MAKE) -C $(SPHINX_DIR) clean
+	$(AT)echo "✅ Cleaned documentation artifacts..."
+
+clean-build:
+	$(AT)echo "🧹 Cleaning build artifacts..."
 	$(AT)rm -rf build dist *.egg-info
 	$(AT)find $(SRC_DIR) $(TESTS_DIR) -name "__pycache__" -type d -exec rm -rf {} +
 	$(AT)rm -rf $(VENV_DIR)
 	$(AT)echo "✅ Finished cleaning build artifacts..."
+
+clean: clean-docs clean-build
 # --------------------------------------------------
 # Version
 # --------------------------------------------------

@@ -41,7 +41,7 @@ root_doc = "api"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # Mock imports that aren't available in your environment
-autodoc_mock_imports = []
+autodoc_mock_imports: list[str] = []
 
 # Extensions:  +
 extensions = [
@@ -90,7 +90,7 @@ autodoc_default_options = {
 }
 
 
-def setup(app: Sphinx):
+def setup(app: Sphinx) -> None:
     app.connect("autodoc-skip-member", skip_dupes)
     app.connect("autodoc-process-docstring", clean_module_docstring)
     app.connect("source-read", add_yaml_front_matter)

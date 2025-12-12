@@ -211,3 +211,4 @@ Co-authored-by: jcook3701 <jcook3701@gmail.com>
 - Merge pull request #6 from jcook3701/develop
 
 Feat 001 (#5)
+- *(bump)* Version bump.
