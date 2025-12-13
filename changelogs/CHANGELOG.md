@@ -4,6 +4,10 @@
 
 ## [unreleased]
 
+### ⚙️  Miscellaneous
+
+- *(bump)* Version bump.
+
 ### 🚀 Added
 
 - *(github)* Got gh release create working.
