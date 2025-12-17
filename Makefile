@@ -134,7 +134,7 @@ JEKYLL_SERVE := bundle exec jekyll serve
 # --------------------------------------------------
 # 🔖 Version Bumping (bumpy-my-version)
 # --------------------------------------------------
-BUMPVERSION := bump-my-version bump --verbose
+BUMPVERSION := $(ACTIVATE) && bump-my-version bump --verbose
 # Patch types:
 MAJOR := major
 MINOR := minor
