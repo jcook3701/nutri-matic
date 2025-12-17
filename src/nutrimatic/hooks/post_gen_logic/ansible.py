@@ -7,10 +7,10 @@ See the LICENSE file for more details.
 Author: Jared Cook
 """
 
-from pathlib import Path
-
 from nutrimatic.core.config import ensure_config
 from nutrimatic.core.logger import setup_logging
+
+from .utils import make_dirs
 
 cfg = ensure_config()  # loads singleton config
 logger = setup_logging(cfg)  # loads singleton logger
@@ -18,19 +18,28 @@ logger = setup_logging(cfg)  # loads singleton logger
 
 def generate_ansible_dirs() -> None:
     """Generate ansible project directories"""
-    project_dir = Path.cwd()
     ansible_dirs = [
+        "plugins",
+        "plugins/action",
+        "plugins/inventory",
+        "plugins/lookup",
+        "plugins/module_utils",
+        "plugins/modules",
         "playbooks",
+        "playbooks/files",
+        "playbooks/tasks",
+        "playbooks/templates",
+        "playbooks/vars",
         "roles",
         "tests",
-        "tests/unit/",
+        "tests/units/",
+        "tests/units/plugins",
+        "tests/units/plugins/action",
+        "tests/units/plugins/inventory",
+        "tests/units/plugins/lookup",
+        "tests/units/plugins/module_utils",
+        "tests/units/plugins/modules",
         "tests/integration",
+        "tests/integration/targets",
     ]
-
-    for d in ansible_dirs:
-        dir_path = project_dir / d
-        if not dir_path.exists():
-            dir_path.mkdir(parents=True, exist_ok=True)
-            logger.info(f"📁 Created {dir_path}")
-        else:
-            logger.info(f"✔️  {dir_path} already exists")
+    make_dirs(ansible_dirs)

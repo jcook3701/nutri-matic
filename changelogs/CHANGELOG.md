@@ -8,6 +8,10 @@
 
 - *(changelogs)* Changelog updates.
 - *(version)* Version Bump.
+
+### 🐛 Fixed
+
+- *(github-pages)* Removed if statement from deploy that stopped manual runs from deploying.
 ## [0.1.4] - 2025-12-13
 
 ### ⚙️  Miscellaneous
