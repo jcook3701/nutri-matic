@@ -2,6 +2,11 @@
 # Changelog:
 # --------------------------------------------------
 
+## [unreleased]
+
+### 🐛 Fixed
+
+- *(build)* Forgot to add virtual environment source for bump-my-version command.
 ## [0.1.5] - 2025-12-17
 
 ### ⚙️  Miscellaneous
