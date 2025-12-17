@@ -49,7 +49,7 @@ endef
 # --------------------------------------------------
 PACKAGE_NAME := "nutri-matic"
 AUTHOR := "Jared Cook"
-VERSION := "0.1.4"
+VERSION := "0.1.5"
 RELEASE := v$(VERSION)
 # --------------------------------------------------
 # 🐙 Github Build Settings
@@ -382,8 +382,15 @@ publish:
 # --------------------------------------------------
 pre-commit: test security dependency-check format-fix lint-check spellcheck typecheck
 pre-release: clean install pre-commit build-docs changelog build
-test-release: pre-release test-publish
+test-release: pre-release publish-test
 ## TODO: Add test to make sure that we are not about to publish an already released version
+## TODO: Need to add a git add --all && git commit -m "automessage" between git-release
+##       and bump-version-patch otherwise always errors out.
+## example: git commit -m "chore(changelogs): changelog updates."
+## TODO: After version bump:
+##       git add --all
+##       git commit -m "chore(version): Version Bump."
+## TODO: jinja ci/cd broken still.
 release: pre-release publish git-release bump-version-patch
 # --------------------------------------------------
 # 🧹 Clean artifacts
