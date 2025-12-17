@@ -19,7 +19,7 @@ logger = setup_logging(cfg)  # loads singleton logger
 def generate_cliff_changelog_dirs() -> None:
     """Generate changelog project directories"""
     changelog_dirs = [
-        "changelog",
-        "changelog/releases",
+        "changelogs",
+        "changelogs/releases",
     ]
     make_dirs(changelog_dirs)

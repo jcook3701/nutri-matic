@@ -12,6 +12,10 @@
 ### 🐛 Fixed
 
 - *(github-pages)* Removed if statement from deploy that stopped manual runs from deploying.
+
+### 🚀 Added
+
+- *(hooks)* Added more hooks for template projects.
 ## [0.1.4] - 2025-12-13
 
 ### ⚙️  Miscellaneous
