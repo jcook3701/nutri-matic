@@ -6,12 +6,40 @@
 
 ### ⚙️  Miscellaneous
 
-- *(bump)* Version bump.
+- *(changelogs)* Changelog updates.
+- *(version)* Version Bump.
+
+### 🐛 Fixed
+
+- *(github-pages)* Removed if statement from deploy that stopped manual runs from deploying.
 
 ### 🚀 Added
 
-- *(github)* Got gh release create working.
-- *(cspell)* Setup pre-commit cspell.
+- *(hooks)* Added more hooks for template projects.
+## [0.1.4] - 2025-12-13
+
+### ⚙️  Miscellaneous
+
+- Feat 003 (#9)
+
+* feat(github): Got gh release create working.
+
+* chore(bump): version bump.
+
+* feat(cspell): setup pre-commit cspell.
+
+* fix(minor): fixes for cookiecutter hooks. Timestamp autovars.
+
+---------
+
+Co-authored-by: jcook3701 <jcook3701@gmail.com>
+- Merge pull request #10 from jcook3701/develop
+
+Feat 003 (#9)
+
+### 🐛 Fixed
+
+- *(build)* Minor fix for makefile test-release
 ## [0.1.3] - 2025-12-12
 
 ### ⚙️  Miscellaneous

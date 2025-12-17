@@ -35,10 +35,22 @@ def clean() -> None:
 def make(cmd: str) -> None:
     """Run a make target inside post-gen, exiting on failure."""
     logger.info(f"▶ Running: make {cmd}")
-    result = subprocess.run(["make", cmd], check=True)
-    if result.returncode != 0:
+    try:
+        subprocess.run(
+            ["make", cmd],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        logger.info(f"✅ Command succeeded: make {cmd}")
+    except subprocess.CalledProcessError as e:
         logger.error(f"❌ Command failed: make {cmd}")
-        sys.exit(result.returncode)
+        # Optionally log stdout/stderr captured from the failed command
+        if e.stdout:
+            logger.error(f"STDOUT: {e.stdout}")
+        if e.stderr:
+            logger.error(f"STDERR: {e.stderr}")
+        sys.exit(e.returncode)
 
 
 def tree() -> None:

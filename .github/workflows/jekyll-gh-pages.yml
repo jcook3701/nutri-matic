@@ -3,9 +3,7 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
       - master
     paths:
@@ -47,7 +45,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     needs: build
     steps:
