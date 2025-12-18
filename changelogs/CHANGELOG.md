@@ -4,6 +4,10 @@
 
 ## [unreleased]
 
+### ⚙️  Miscellaneous
+
+- *(version)* Version update to 1.6!
+
 ### 🐛 Fixed
 
 - *(build)* Forgot to add virtual environment source for bump-my-version command.
