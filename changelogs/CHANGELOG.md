@@ -2,11 +2,12 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
+## [0.1.6] - 2025-12-18
 
 ### ⚙️  Miscellaneous
 
 - *(version)* Version update to 1.6!
+- *(changelog)* Updates changelogs.
 
 ### 🐛 Fixed
 
