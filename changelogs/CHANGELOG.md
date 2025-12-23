@@ -2,6 +2,11 @@
 # Changelog:
 # --------------------------------------------------
 
+## [unreleased]
+
+### ⚙️  Miscellaneous
+
+- *(version)* Bumped to version 0.1.7!
 ## [0.1.6] - 2025-12-18
 
 ### ⚙️  Miscellaneous
