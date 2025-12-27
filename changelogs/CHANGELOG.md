@@ -2,7 +2,7 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
+## [0.1.8] - 2025-12-27
 
 ### ⚙️  Miscellaneous
 
@@ -10,6 +10,7 @@
 - Merge pull request #16 from jcook3701/feat-006
 
 Feat 006
+- *(changelog)* Updates to changelog.
 
 ### 🐛 Fixed
 
