@@ -7,6 +7,13 @@
 ### ⚙️  Miscellaneous
 
 - *(version)* Version bump to 1.8!
+- Merge pull request #16 from jcook3701/feat-006
+
+Feat 006
+
+### 🐛 Fixed
+
+- *(hooks)* Fixed docs hooks for cookiecutter projects.
 ## [0.1.7] - 2025-12-23
 
 ### ⚙️  Miscellaneous
