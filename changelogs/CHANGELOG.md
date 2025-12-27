@@ -6,7 +6,14 @@
 
 ### ⚙️  Miscellaneous
 
-- *(changelog)* Changelog update!
+- Feat 008 (#19)
+
+* chore(changelog): changelog update!
+
+* fix(hooks): documentation generation fix.
+- Merge pull request #20 from jcook3701/develop
+
+Feat 008 (#19)
 ## [0.1.9] - 2025-12-27
 
 ### ⚙️  Miscellaneous
