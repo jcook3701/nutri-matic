@@ -7,6 +7,7 @@
 ### ⚙️  Miscellaneous
 
 - *(version)* Version bump to 0.1.10!
+- *(version)* Bump version to 0.1.11!
 ## [0.1.10] - 2025-12-27
 
 ### ⚙️  Miscellaneous
