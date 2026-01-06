@@ -8,6 +8,16 @@
 
 - *(version)* Version bump to 0.1.10!
 - *(version)* Bump version to 0.1.11!
+- Merge pull request #21 from jcook3701/feat-009
+
+Feat 009
+- Merge pull request #22 from jcook3701/develop
+
+Develop
+
+### 🐛 Fixed
+
+- *(hooks)* Finally got cookiecutter sub-template recursion fixed!
 ## [0.1.10] - 2025-12-27
 
 ### ⚙️  Miscellaneous
