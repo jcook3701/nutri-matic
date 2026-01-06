@@ -22,6 +22,10 @@ logger = setup_logging(cfg)  # loads singleton logger
 
 def generate_docs_templates(context: dict[str, Any]) -> None:
     """Generate one or more documentation templates inside docs/"""
+    if context.get("_is_sub_template"):
+        logger.debug("Skipping docs generation inside sub-template")
+        return
+
     project_dir = Path.cwd()
     docs_dir = project_dir / "docs"
     tmp_dir = docs_dir / "_tmp_docs"
@@ -35,6 +39,7 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
         "author": context.get("author"),
         "version": context.get("version"),
         "description": context.get("description"),
+        "_is_sub_template": True,
     }
 
     templates = {
@@ -69,18 +74,17 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
             logger.info(f"🚫 Skipping {cfg['name']} docs (disabled)")
             continue
 
-        sub_template = cfg["_is_sub_template"]
         name = cfg["name"]
         repo = cfg["repo"]
         target = cfg["target"]
         extra_ctx = cfg["extra_ctx"]
 
-        if sub_template or (target.exists() and any(target.iterdir())):
-            logger.info(f"⏭️ Skipping {name}: {target} already exists.")
-            continue
-
         logger.info(f"📦 Generating {name} docs from {repo} → {target}")
         try:
+            if target.exists() and any(target.iterdir()):
+                logger.info(f"⏭️ Skipping {name}: {target} already exists.")
+                continue
+
             # Bake template into temp directory
             cookiecutter(
                 f"https://github.com/{repo}.git",
