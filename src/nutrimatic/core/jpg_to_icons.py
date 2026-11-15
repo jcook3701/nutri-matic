@@ -24,6 +24,12 @@ import os
 import cairosvg
 from PIL import Image
 
+from nutrimatic.core.config import ensure_config
+from nutrimatic.core.logger import setup_logging
+
+cfg = ensure_config()  # loads singleton config
+logger = setup_logging(cfg)  # loads singleton logger
+
 
 # TODO: This tool should probably be moved to a different project.
 def convert_to_icons(
@@ -58,7 +64,7 @@ def convert_to_icons(
                     resized_img = img_rgba.resize((size, size), resample_filter)
                     png_path = os.path.join(output_folder, f"icon{size}.png")
                     resized_img.save(png_path, format="PNG")
-                    print(f"Saved PNG: {png_path}")
+                    logger.info(f"Saved PNG: {png_path}")
 
             # Save a single SVG file if needed
             if export_format in ["svg", "both"]:
@@ -69,10 +75,10 @@ def convert_to_icons(
                 resized_img.save(png_tmp_path, format="PNG")
                 cairosvg.svg_from_png(png_tmp_path, write_to=svg_output_path)
                 os.remove(png_tmp_path)  # Clean up temporary PNG
-                print(f"Saved SVG: {svg_output_path}")
+                logger.info(f"Saved SVG: {svg_output_path}")
 
     except Exception as e:
-        print(f"Error: {e}")
+        logger.exception(f"Error: {e}")
 
 
 def main() -> None:
