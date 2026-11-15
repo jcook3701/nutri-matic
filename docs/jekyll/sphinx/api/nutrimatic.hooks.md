@@ -15,6 +15,6 @@ Description: Pre Generation Logic initialization.
 
 ### Modules
 
-| [`post_gen_logic`](nutrimatic.hooks.post_gen_logic.md#module-nutrimatic.hooks.post_gen_logic)   | nutri-matic Package   |
-|-------------------------------------------------------------------------------------------------|-----------------------|
-| [`pre_gen_logic`](nutrimatic.hooks.pre_gen_logic.md#module-nutrimatic.hooks.pre_gen_logic)      | nutri-matic Package   |
+| [`post_gen_logic`](nutrimatic.hooks.post_gen_logic.md#module-nutrimatic.hooks.post_gen_logic)   | Public post-generation helpers shared across Nutri-Matic Cookiecutter projects.   |
+|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [`pre_gen_logic`](nutrimatic.hooks.pre_gen_logic.md#module-nutrimatic.hooks.pre_gen_logic)      | nutri-matic Package                                                               |

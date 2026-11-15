@@ -6,6 +6,8 @@
         "addopts",
         "autovars",
         "bumpversion",
+        "buymeacoffee",
+        "cctemplate",
         "codespell",
         "cookiecutter",
         "deptry",

@@ -12,6 +12,7 @@
 ### 🐛 Fixed
 
 - *(configuration)* Python configuration fix for deptry.
+- *(lint)* Linting fixes.
 
 ### 🚀 Added
 

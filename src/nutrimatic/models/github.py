@@ -6,7 +6,7 @@ See the LICENSE file for more details.
 
 Author: Jared Cook
 Description: Github Models:
-(GitHubaccount, RepoInfo)
+(GitHubAccount, RepoInfo)
 """
 
 from pathlib import Path
