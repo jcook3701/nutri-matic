@@ -9,6 +9,10 @@
 - *(changelog)* Changelog update.
 - *(version)* Update version to 0.1.15!
 
+### 🐛 Fixed
+
+- *(configuration)* Python configuration fix for deptry.
+
 ### 🚀 Added
 
 - *(jinja)* Added jinja2-time to project to allow this project to be used to pull my cookiecutter templates.

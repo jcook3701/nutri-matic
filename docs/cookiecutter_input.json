@@ -1,1 +1,65 @@
-{}
+{
+    "__python": {
+        "keywords": [
+            "python3",
+            "cookiecutter",
+            "template",
+            "automation"
+        ],
+        "package_name": "nutri_matic",
+        "target_version": "py311"
+    },
+    "__year_range": "2025-2026",
+    "_checkout": "feat-003",
+    "_copy_without_render": [
+        ".github/workflows/*"
+    ],
+    "_default_branch": "master",
+    "_extensions": [
+        "jinja2.ext.do",
+        "jinja2.ext.loopcontrols"
+    ],
+    "_hooks": {
+        "post_gen_make_cmds": {
+            "build-docs": false,
+            "changelog": false,
+            "git-init": false,
+            "install": true,
+            "pre-commit-init": false
+        }
+    },
+    "_is_sub_template": false,
+    "_jinja2_env_vars": {
+        "lstrip_blocks": true,
+        "trim_blocks": true
+    },
+    "_output_dir": "/home/jcook/Documents/build/tmp/cookiecutter/cookies/test-env",
+    "_repo_dir": "/home/jcook/.cookiecutters/python3-cookiecutter",
+    "_template": "git@github.com:jcook3701/python3-cookiecutter.git",
+    "add_github_docs": true,
+    "add_sphinx_docs": true,
+    "author": "Jared Cook",
+    "buymeacoffee_username": "jcook3701",
+    "changelog": "git-cliff",
+    "contribution_model": "CLA",
+    "copyright": "Copyright (c) 2025-2026, Jared Cook",
+    "current_year": "2026",
+    "description": "Cookiecutter utilities for streamlining development and utilization of Cookiecutter templates.",
+    "email": "jcook3701+github@gmail.com",
+    "ga_tracking": "G-C7PWLWSHB9",
+    "github_io": "https://jcook3701.github.io/nutri_matic",
+    "github_org": null,
+    "github_username": "jcook3701",
+    "license": "AGPL-3.0-or-later",
+    "linkedin_usercode": "jared-cook-b3585a114",
+    "project_name": "Nutri-Matic",
+    "project_slug": "nutri_matic",
+    "publication_year": "2025",
+    "python_version": "3.11",
+    "repo_url": "https://github.com/jcook3701/nutri_matic",
+    "template_type": "python",
+    "theme": "just-the-docs/just-the-docs@v0.11.0",
+    "timezone": "America/Los_Angeles",
+    "twitter_username": "",
+    "version": "0.1.0"
+}
