@@ -6,8 +6,20 @@
 
 ### ⚙️  Miscellaneous
 
-- *(version)* Bump version to 0.1.14!
-## [0.1.13] - 2026-01-26
+- *(changelog)* Changelog update.
+- *(version)* Update version to 0.1.15!
+
+### 🐛 Fixed
+
+- *(configuration)* Python configuration fix for deptry.
+- *(lint)* Linting fixes.
+
+### 🚀 Added
+
+- *(jinja)* Added jinja2-time to project to allow this project to be used to pull my cookiecutter templates.
+- *(timezone)* Timezone pre-commit preparation.
+- *(jinja2)* Jinja2 cookiecutter hooks.
+## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous
 
@@ -21,7 +33,16 @@
 - Merge pull request #30 from jcook3701/develop
 
 Feat 011 (#29)
-- *(changelog)* Changelog update.
+- Feat 012 (#31)
+
+* chore(changelog): Changelog update.
+
+* chore(version): Bump version to 0.1.14!
+
+* feat(docs): Pass github io to docs template from main template.
+- Merge pull request #32 from jcook3701/develop
+
+Feat 012 (#31)
 ## [0.1.12] - 2026-01-24
 
 ### ⚙️  Miscellaneous
