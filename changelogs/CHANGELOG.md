@@ -2,23 +2,30 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
+## [0.1.15] - 2026-11-16
 
 ### ⚙️  Miscellaneous
 
-- *(changelog)* Changelog update.
-- *(version)* Update version to 0.1.15!
+- Feat 013 (#33)
 
-### 🐛 Fixed
+* chore(changelog): changelog update.
 
-- *(configuration)* Python configuration fix for deptry.
-- *(lint)* Linting fixes.
+* chore(version): Update version to 0.1.15!
 
-### 🚀 Added
+* feat(jinja): Added jinja2-time to project to allow this project to be used to pull my cookiecutter templates.
 
-- *(jinja)* Added jinja2-time to project to allow this project to be used to pull my cookiecutter templates.
-- *(timezone)* Timezone pre-commit preparation.
-- *(jinja2)* Jinja2 cookiecutter hooks.
+* feat(timezone): Timezone pre-commit preparation.
+
+* fix(configuration): Python configuration fix for deptry.
+
+* feat(jinja2): jinja2 cookiecutter hooks.
+
+* fix(lint): linting fixes.
+
+* fix(lint): linting fixes.
+- Merge pull request #34 from jcook3701/develop
+
+Feat 013 (#33)
 ## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous
