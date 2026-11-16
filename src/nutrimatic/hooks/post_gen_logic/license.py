@@ -1,11 +1,5 @@
-"""nutri-matic Package
-
-© All rights reserved. Jared Cook
-
-See the LICENSE file for more details.
-
-Author: Jared Cook
-"""
+# SPDX-FileCopyrightText: Copyright (c) 2026, Jared W. Cook
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 from pathlib import Path
 

@@ -9,8 +9,6 @@ nutrimatic.hooks.post_gen_logic.docs
 
 <a id="module-nutrimatic.hooks.post_gen_logic.docs"></a>
 
-nutri-matic Package
-
 ### Functions
 
 | [`generate_docs_templates`](#nutrimatic.hooks.post_gen_logic.docs.generate_docs_templates)(context)   | Generate one or more documentation templates inside docs/   |

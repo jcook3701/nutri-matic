@@ -66,12 +66,13 @@ Run tree cmd inside the post-gen.
 
 ### Modules
 
-| [`bash`](nutrimatic.core.bash.md#module-nutrimatic.core.bash)             | nutri-matic Package   |
-|---------------------------------------------------------------------------|-----------------------|
-| [`config`](nutrimatic.core.config.md#module-nutrimatic.core.config)       | nutri-matic Package   |
-| [`github`](nutrimatic.core.github.md#module-nutrimatic.core.github)       | nutri-matic Package   |
-| [`logger`](nutrimatic.core.logger.md#module-nutrimatic.core.logger)       | nutri-matic Package   |
-| [`metadata`](nutrimatic.core.metadata.md#module-nutrimatic.core.metadata) | nutri-matic Package   |
-| [`parser`](nutrimatic.core.parser.md#module-nutrimatic.core.parser)       | nutri-matic Package   |
-| [`template`](nutrimatic.core.template.md#module-nutrimatic.core.template) | nutri-matic Package   |
-| [`utils`](nutrimatic.core.utils.md#module-nutrimatic.core.utils)          | nutri-matic Package   |
+| [`bash`](nutrimatic.core.bash.md#module-nutrimatic.core.bash)                         | nutri-matic Package   |
+|---------------------------------------------------------------------------------------|-----------------------|
+| [`config`](nutrimatic.core.config.md#module-nutrimatic.core.config)                   | nutri-matic Package   |
+| [`github`](nutrimatic.core.github.md#module-nutrimatic.core.github)                   | nutri-matic Package   |
+| [`jpg_to_icons`](nutrimatic.core.jpg_to_icons.md#module-nutrimatic.core.jpg_to_icons) |                       |
+| [`logger`](nutrimatic.core.logger.md#module-nutrimatic.core.logger)                   | nutri-matic Package   |
+| [`metadata`](nutrimatic.core.metadata.md#module-nutrimatic.core.metadata)             | nutri-matic Package   |
+| [`parser`](nutrimatic.core.parser.md#module-nutrimatic.core.parser)                   | nutri-matic Package   |
+| [`template`](nutrimatic.core.template.md#module-nutrimatic.core.template)             | nutri-matic Package   |
+| [`utils`](nutrimatic.core.utils.md#module-nutrimatic.core.utils)                      | nutri-matic Package   |

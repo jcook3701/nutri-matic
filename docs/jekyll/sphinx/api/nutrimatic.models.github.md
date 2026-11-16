@@ -12,7 +12,7 @@ nutrimatic.models.github
 nutri-matic Package
 
 Description: Github Models:
-(GitHubaccount, RepoInfo)
+(GitHubAccount, RepoInfo)
 
 ### Classes
 

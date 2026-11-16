@@ -9,8 +9,6 @@ nutrimatic.hooks.post_gen_logic.auto_vars
 
 <a id="module-nutrimatic.hooks.post_gen_logic.auto_vars"></a>
 
-nutri-matic Package
-
 ### Functions
 
 | [`replace_placeholders_in_dir`](#nutrimatic.hooks.post_gen_logic.auto_vars.replace_placeholders_in_dir)(replacements[, path])   | Walk through every file in the newly generated project directory and replace placeholders in all files.   |
